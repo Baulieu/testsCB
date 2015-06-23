@@ -37,7 +37,7 @@ class Xlswriter:
         chartImgs.add_series({'values': '=data!$P$5:$Y$5'})
         chartImgs.add_series({'values': '=data!$Z$5:$AI$5'})
         chartImgs.add_series({'values': '=data!$AJ$5:$AS$5'})
-        chartTauxProf = workbook.add_chart({'type': 'column'})  # not working
+        chartTauxProf = workbook.add_chart({'type': 'column'})
         chartTauxProf.add_series({'values': '=data!$A$6:$E$6'})
         chartTauxProf.add_series({'values': '=data!$F$6:$J$6'})
         chartTauxProf.add_series({'values': '=data!$K$6:$O$6'})
@@ -51,7 +51,7 @@ class Xlswriter:
         chartFiabTaille.add_series({'values': '=data!$P$7:$Y$7'})
         chartFiabTaille.add_series({'values': '=data!$Z$7:$AI$7'})
         chartFiabTaille.add_series({'values': '=data!$AJ$7:$AS$7'})
-        chartNbTargets = workbook.add_chart({'type': 'column'})  # not working
+        chartNbTargets = workbook.add_chart({'type': 'column'})
         chartNbTargets.add_series({'values': '=data!$A$8:$E$8'})
         chartNbTargets.add_series({'values': '=data!$F$8:$J$8'})
         chartNbTargets.add_series({'values': '=data!$K$8:$O$8'})
@@ -83,7 +83,7 @@ class Xlswriter:
         charts.insert_chart('K3', chartFiabTaille)
         charts.insert_chart('S3', chartNbPertes)
         charts.insert_chart('AA3', chartNbPoints)
-        # charts.insert_chart('C18', chartNbTargets)
+        charts.insert_chart('C18', chartNbTargets)
         charts.insert_chart('K18', chartPerf)
-        # charts.insert_chart('S18', chartTauxProf)
+        charts.insert_chart('S18', chartTauxProf)
         workbook.close()
