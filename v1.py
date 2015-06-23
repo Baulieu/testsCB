@@ -70,7 +70,7 @@ while i < 110:
     # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
-    a[name] = Analysis(name)
+    a[name] = Analysis(name, settings)
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 20
@@ -83,7 +83,7 @@ while i < 15:
     # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
-    a[name] = Analysis(name)
+    a[name] = Analysis(name, settings)
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 3
@@ -96,7 +96,7 @@ while i < 55:
     # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
-    a[name] = Analysis(name)
+    a[name] = Analysis(name, settings)
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 10
@@ -109,7 +109,7 @@ while i < 1000:
     # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
-    a[name] = Analysis(name)
+    a[name] = Analysis(name, settings)
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 100
@@ -123,7 +123,7 @@ while i < 5:
     # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
-    a[name] = Analysis(name)
+    a[name] = Analysis(name, settings)
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 0.5
@@ -136,7 +136,7 @@ while i < 52:
     # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
-    a[name] = Analysis(name)
+    a[name] = Analysis(name, settings)
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 5"""
