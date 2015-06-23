@@ -8,13 +8,10 @@ import xlsxwriter
 class Xlswriter:
 
     def __init__(self):
-        self.full_analysis = None
-
-    def __init__(self, analysis):
-        self.full_analysis = analysis
+        self.full_analysis = []
 
     def add_analysis(self, analysis, name, i):  # adds one single analysis -> best way
-        self.full_analysis.append((analysis, name, i))
+        self.full_analysis.append((name, i, analysis))
 
     def write(self):
         workbook = xlsxwriter.Workbook('analyse.xlsx')

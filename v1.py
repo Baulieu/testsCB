@@ -72,7 +72,8 @@ while i < 110:
     settings.change(stri, i)
     t = tools.openBackup()
     data.appendResult(name, t)
-    a[name] = Analysis(name, t)
+    a[name] = Analysis(name)
+    a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 20
 """ --- points_min --- + --- 3 to 15 --- ""
@@ -146,7 +147,8 @@ while i < 110:
     if temp == "exit":
         raise NameError('arret volontaire du processus. For the watch.')
     a[name].addFalsep(temp)  # sending it to the analysis module
-    xls.add_analysis(a[name])
+    xls.add_analysis(a[name], name, i)
+    i += 20
 
 """i = 3
 while i < 15:

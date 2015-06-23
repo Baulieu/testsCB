@@ -15,7 +15,7 @@ class Analysis:
         self.nbPertes = None
         self.perf = 0
 
-    def __init__(self, name, result):
+        """def __init__(self, name, result):
         self.name = name
         self.result = result
         self.falsep = 0
@@ -25,7 +25,7 @@ class Analysis:
         self.nbTargets = self.calcNbTargets()
         self.nbPoints = self.calcNbPoints()
         self.nbPertes = self.calcNbPertes()
-        self.perf = self.perfIndice()
+        self.perf = self.perfIndice()"""
 
     def addFalsep(self, falsep):
         self.falsep = falsep
@@ -54,7 +54,10 @@ class Analysis:
                 if p.getZ() ==0:
                     i += 1
                 j += 1
-        return i / j
+        if j == 0:
+            return i
+        else:
+            return i / j
 
     def calcFiabTaille(self, alpha):  # reliability of height -> Ok
         j = 0
@@ -66,11 +69,15 @@ class Analysis:
                 moy += p.getHeight()
                 i += 1
                 j += 1
-            moy = moy / i
+            if i != 0:
+                moy = moy / i
             for p in t:
                 if p.getHeight() < moy - alpha or p.getHeight() > moy + alpha:
                     n += 1
-        return n / j
+        if j == 0:
+            return n
+        else:
+            return n / j
 
     def calcNbTargets(self):  # number of detected targets -> Ok
         i = 0
