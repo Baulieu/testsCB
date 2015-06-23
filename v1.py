@@ -67,6 +67,7 @@ while i < 110:
     stri = "history"
     name = stri + str(i)
     settings.change(stri, i)
+    # TODO add subprocess call to exe and apply to each parameter
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
