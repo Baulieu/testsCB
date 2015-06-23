@@ -142,7 +142,7 @@ a[name].addFalsep(temp)  # sending it to the analysis module"""
 i = 10
 while i < 110:
     name = "history" + str(i)
-    subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading CAM3 and closing it at the end
+    # subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading CAM3 and closing it at the end
     temp = input("nombre de faux positifs :    **attention : ne taper que des chiffres! ou alors exit pour arreter le programme***\n")  # reading the number
     if temp == "exit":
         raise NameError('arret volontaire du processus. For the watch.')
