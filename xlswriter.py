@@ -87,7 +87,7 @@ class Xlswriter:
         charts.insert_chart('C3', chartHistory)
         charts.insert_chart('K3', chartPointsMin)
         charts.insert_chart('S3', chartSizeMin)
-        charts.insert_chart('AA3', chartDist3d)
+        charts.insert_chart('S18', chartDist3d)
         charts.insert_chart('C18', chartBetweenTargets)
         charts.insert_chart('K18', chartSurfMin)
         workbook.close()
