@@ -1,0 +1,11 @@
+﻿%YAML 1.0
+---
+Caracteristiques generales:
+    nom: test                  # nom de l'expérience
+    nomCam3: test.avi          # nom donné à la vidéo CAM3
+    fps: 60                    # fps de la vidéo originale
+    serial: 1354               # serial de la ZED utilisée
+    convergence: 0.0203        #convergence de la ZED utilisée
+
+Qualité:
+    targets: 5                 #nombre de targets attendus dans la vidéo
