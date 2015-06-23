@@ -28,6 +28,7 @@ class Xlswriter:
             data.write(9, i, a[2].nbPoints)
             data.write(10, i, a[2].nbPertes)
             data.write(11, i, a[2].perf)
+            i += 1
         charts = workbook.add_worksheet('charts')
         chartImgs = workbook.add_chart({'type': 'column'})
         chartImgs.add_series({'values': '=data!$A$5:$E$5'})
@@ -78,3 +79,10 @@ class Xlswriter:
         chartPerf.add_series({'values': '=data!$P$11:$Y$11'})
         chartPerf.add_series({'values': '=data!$Z$11:$AI$11'})
         chartPerf.add_series({'values': '=data!$AJ$11:$AS$11'})
+        charts.insert_chart('C3', chartImgs)
+        charts.insert_chart('C3', chartFiabTaille)
+        charts.insert_chart('C3', chartNbPertes)
+        charts.insert_chart('C3', chartNbPoints)
+        charts.insert_chart('C3', chartNbTargets)
+        charts.insert_chart('C3', chartPerf)
+        charts.insert_chart('C3', chartTauxProf)
