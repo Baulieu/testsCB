@@ -6,7 +6,8 @@
         - run the program for k values of the parameter
         - save the result
         - choose the best value and use it for the next steps
-    - analyze...
+    - analyze (generate KPIs)
+    - parse the results into an Excel file
 """
 
 """ /!\ BEFORE LAUNCH /!\
@@ -46,8 +47,6 @@ settings = Parameters(tools.openYml("caracteristiques_video.yml"))
 
 settings.addOut(tools.openYml("outside.yml"))
 settings.addDrone(tools.openYml("drones.yml"))
-# settings.change("history", 10)
-# settings.change("distance_3d", 6)
 
 
 data = Donnees("main test")
@@ -56,8 +55,6 @@ f = open("testDonnees.txt", "w")
 t = tools.openBackup()
 data.appendResult("history10", t)
 data.printMe(f)
-# a = Analysis("history10", t)
-# a.printMe()
 
 
 a = {}  # dictionary of analysis
@@ -85,7 +82,7 @@ while i < 15:
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
-    a[name].addResult(name)
+    a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 3
 "" --- surface_min --- + --- 5 to 50 --- ""
@@ -97,7 +94,7 @@ while i < 55:
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
-    a[name].addResult(name)
+    a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 10
 "" --- between_target --- ++ --- 100 to 1000 --- ""
@@ -109,7 +106,7 @@ while i < 1000:
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
-    a[name].addResult(name)
+    a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 100
 "" --- distance_3d and distance_pixel --- ++ --- 0.5 to 5 and 20 to 200 --- ""
@@ -122,7 +119,7 @@ while i < 5:
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
-    a[name].addResult(name)
+    a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 0.5
 "" --- size_min --- ++ --- 2 to 50 --- ""
@@ -134,7 +131,7 @@ while i < 52:
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
-    a[name].addResult(name)
+    a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 5"""
 

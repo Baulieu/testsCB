@@ -85,12 +85,13 @@ class Analysis:
             i += 1
         return i
 
-    def calcNbPoints(self):  # number of detected pictures -> Ok
+    def calcNbPoints(self):
+      # number of detected pictures -> Ok
         i = 0
         for t in self.result:
             for p in t:
                 i += 1
-        return i
+        return i  # TODO divide by the theorical target number
 
     def calcNbPertes(self):  # how many times a target has been lost during detection -> No
         # mode opératoire: savoir quand sont les frames analysées, pour chaque target ranger ses points dans les intervalles .on part du premier, on va au dernier. à chaque fois qu'on passe de True à False, on incrémente, et on enlève une fois à la fin pour ne pas compter la disparition normal de la cible. Et paf, ça fait des chocapics.
