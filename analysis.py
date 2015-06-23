@@ -1,9 +1,10 @@
 """ KPIs calculation """
+from parameters import Parameters
 
 
 class Analysis:
 
-    def __init__(self, name):
+    def __init__(self, name, settings):
         self.name = name
         self.result = None
         self.falsep = 0
@@ -14,6 +15,7 @@ class Analysis:
         self.nbPoints = None
         self.nbPertes = None
         self.perf = 0
+        self.settings = settings
 
         """def __init__(self, name, result):
         self.name = name
@@ -91,7 +93,10 @@ class Analysis:
         for t in self.result:
             for p in t:
                 i += 1
-        return i  # TODO divide by the theorical target number
+        if self.settings.getNbTargetsTheo() != 0:
+            return i/self.settings.getNbTargetsTheo()
+        else:
+            return i
 
     def calcNbPertes(self):  # how many times a target has been lost during detection -> No
         # mode opératoire: savoir quand sont les frames analysées, pour chaque target ranger ses points dans les intervalles .on part du premier, on va au dernier. à chaque fois qu'on passe de True à False, on incrémente, et on enlève une fois à la fin pour ne pas compter la disparition normal de la cible. Et paf, ça fait des chocapics.

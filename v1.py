@@ -67,7 +67,7 @@ while i < 110:
     stri = "history"
     name = stri + str(i)
     settings.change(stri, i)
-    # TODO add subprocess call to exe and apply to each parameter
+    # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
@@ -80,6 +80,7 @@ while i < 15:
     stri = "points_min"
     name = stri + str(i)
     settings.change(stri, i)
+    # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
@@ -92,6 +93,7 @@ while i < 55:
     stri = "surface_min"
     name = stri + str(i)
     settings.change(stri, i)
+    # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
@@ -104,6 +106,7 @@ while i < 1000:
     stri = "between_target"
     name = stri + str(i)
     settings.change(stri, i)
+    # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
@@ -117,6 +120,7 @@ while i < 5:
     name = stri + str(i)
     settings.change(stri, i)
     settings.change("distance_pixel", i/40)
+    # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
@@ -129,6 +133,7 @@ while i < 52:
     stri = "size_min"
     name = stri + str(i)
     settings.change(stri, i)
+    # subprocess.call(['./exe'])
     t = tools.openBackup()
     data.appendResult(name, t)
     a[name] = Analysis(name)
@@ -137,10 +142,6 @@ while i < 52:
     i += 5"""
 
 """ et maintenant, petite seance de visionnage de CAM3 des familles."""
-
-"""subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading CAM3 and closing it at the end
-temp = input("nombre de faux positifs :\n")  # reading the number
-a[name].addFalsep(temp)  # sending it to the analysis module"""
 
 i = 10
 while i < 110:
