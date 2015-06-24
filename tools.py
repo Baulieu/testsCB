@@ -19,7 +19,7 @@ class Tools:
         return load_all(source)  # load_all function from pyYaml package
         source.close()
 
-    def openBackup(self):  # WARNING -> the function must empty the backup file before closing it.. + for now, this = BIG FAT BULLSHIT
+    def openBackup(self):  # WARNING -> obsolete, use targets and performance
         result = Result()
         tarTemp = Target(0)
         with open("backup.txt") as f:
@@ -39,3 +39,7 @@ class Tools:
                         del tempPoint
                     result.append(tarTemp)
         return result
+
+    # def targets(self):
+    #     result = Result()
+    #     return 0

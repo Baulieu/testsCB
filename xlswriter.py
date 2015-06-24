@@ -19,7 +19,6 @@ class Xlswriter:
         i = 1
         for a in self.full_analysis:
             data.write(2, i, a[0])
-            data.write(3, i, a[1])
             data.write(4, i, a[1])
             data.write(5, i, a[2].imgs)
             data.write(6, i, a[2].tauxProfondeur)
