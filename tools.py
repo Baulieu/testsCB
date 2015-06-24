@@ -19,13 +19,13 @@ class Tools:
         return load_all(source)  # load_all function from pyYaml package
         source.close()
 
-    def openBackup(self):  # WARNING -> the function must empty the backup file before closing it.. + for now, this = BULLSHIT
+    def openBackup(self):  # WARNING -> obsolete, use targets and performance
         result = Result()
         tarTemp = Target(0)
         with open("backup.txt") as f:
             temp = f.readlines()
         f.close()
-        # open("backup.txt", "w").close()
+        # open("backup.txt", "w").close()  # TODO uncomment to activate backup refresh
         for index, line in enumerate(temp):  # on parcourt toutes les lignes du fichier
             if line.__len__() > 10 and line[:1] == "|":  # la ligne ne contient pas qu'un |
                 if index < temp.__len__() - 1 and temp[index + 1][:13] != line[:13]: # on est pas sur une ligne partielle
@@ -39,3 +39,7 @@ class Tools:
                         del tempPoint
                     result.append(tarTemp)
         return result
+
+    # def targets(self):
+    #     result = Result()
+    #     return 0

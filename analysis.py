@@ -1,9 +1,10 @@
 """ KPIs calculation """
+from parameters import Parameters
 
 
 class Analysis:
 
-    def __init__(self, name):
+    def __init__(self, name, settings):
         self.name = name
         self.result = None
         self.falsep = 0
@@ -14,8 +15,9 @@ class Analysis:
         self.nbPoints = None
         self.nbPertes = None
         self.perf = 0
+        self.settings = settings
 
-    def __init__(self, name, result):
+        """def __init__(self, name, result):
         self.name = name
         self.result = result
         self.falsep = 0
@@ -25,7 +27,7 @@ class Analysis:
         self.nbTargets = self.calcNbTargets()
         self.nbPoints = self.calcNbPoints()
         self.nbPertes = self.calcNbPertes()
-        self.perf = self.perfIndice()
+        self.perf = self.perfIndice()"""
 
     def addFalsep(self, falsep):
         self.falsep = falsep
@@ -54,7 +56,10 @@ class Analysis:
                 if p.getZ() ==0:
                     i += 1
                 j += 1
-        return i / j
+        if j == 0:
+            return i
+        else:
+            return i / j
 
     def calcFiabTaille(self, alpha):  # reliability of height -> Ok
         j = 0
@@ -66,11 +71,15 @@ class Analysis:
                 moy += p.getHeight()
                 i += 1
                 j += 1
-            moy = moy / i
+            if i != 0:
+                moy = moy / i
             for p in t:
                 if p.getHeight() < moy - alpha or p.getHeight() > moy + alpha:
                     n += 1
-        return n / j
+        if j == 0:
+            return n
+        else:
+            return n / j
 
     def calcNbTargets(self):  # number of detected targets -> Ok
         i = 0
@@ -78,12 +87,16 @@ class Analysis:
             i += 1
         return i
 
-    def calcNbPoints(self):  # number of detected pictures -> Ok
+    def calcNbPoints(self):
+      # number of detected pictures -> Ok
         i = 0
         for t in self.result:
             for p in t:
                 i += 1
-        return i
+        if self.settings.getNbTargetsTheo() != 0:
+            return i/self.settings.getNbTargetsTheo()
+        else:
+            return i
 
     def calcNbPertes(self):  # how many times a target has been lost during detection -> No
         # mode opératoire: savoir quand sont les frames analysées, pour chaque target ranger ses points dans les intervalles .on part du premier, on va au dernier. à chaque fois qu'on passe de True à False, on incrémente, et on enlève une fois à la fin pour ne pas compter la disparition normal de la cible. Et paf, ça fait des chocapics.

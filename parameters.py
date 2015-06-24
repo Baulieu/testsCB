@@ -59,3 +59,18 @@ class Parameters:
                 break
             i += 1
             file.seek(i)
+
+    def getNbTargetsTheo(self):
+        i = 0
+        file = open("caracteristiques_video.yml", encoding="cp1252", mode="r+")
+        while file.read(1) != "":
+            if file.read(7) == "targets":
+                i += 10
+                file.seek(i)
+                result = file.read(3)
+                result = result.split(" ")
+                value = float(result[0])
+                break
+            i += 1
+            file.seek(i)
+        return value

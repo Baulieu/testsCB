@@ -29,7 +29,7 @@ class Point:
         self.H = str[6]
         self.S = str[7]
         self.V = str[8]
-        #frame and surface missing
+        # TODO add frames and target surface
 
     def whichTarget(self):
         return self.target
