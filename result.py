@@ -5,7 +5,7 @@ from target import Target
 class Result:
 
     def __init__(self):
-        self.targets = []
+        self.liste = []
 
     def printMe(self):
         for t in self.targets:
@@ -15,8 +15,19 @@ class Result:
         for t in self.targets:
             t.printMe(f)
 
-    def append(self, target):
-        self.targets.append(target)
+    # def appendTarget(self, target):
+    #     self.targets.append(target)
+    
+    def addListTarget(self, tt):
+        self.liste.append(tt)
 
+    def okcestbon(self):
+        self.targets = [Target(id) for id in self.liste]
+    
     def __iter__(self):
         return self.targets.__iter__()
+
+    def addPoint(self, new):
+        for t in self.targets:
+            if t.getId() == new.target_id:
+                t.addPoint(new)

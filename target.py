@@ -1,5 +1,7 @@
 """class for a target, contains a list of points"""
 
+import os
+
 
 class Target:
 
@@ -20,12 +22,16 @@ class Target:
             p.printMe()
 
     def printMe(self, f):
-        print(self.id, self.points.__len__(), file=f)
-        # for p in self.points:
-        #     p.printMe(f)
+        print(self.id, self.points.__len__(), "\n", file=f)
+        for p in self.points:
+            p.printMe(f)
 
     def getId(self):
         return self.id
 
     def __iter__(self):
         return self.points.__iter__()
+
+    def clean(self):
+        while self.points.__len__() >= 1:
+            self.points.pop()

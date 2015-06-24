@@ -1,5 +1,7 @@
 """container for little tools, to prevent v1.py explosion"""
 from yaml import load_all
+from collections import defaultdict
+import os
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -46,12 +48,14 @@ class Tools:
             temp = f.readlines()
         f.close()
         # open ("1435075953418_target.txt", "w").close()  # TODO uncomment to activate backup refresh
-        targets = {}
-        for index, line in enumerate(temp):
+        # targets = defaultdict(list)
+        targets = []
+        points = []
+        for line in temp:
             n1 = line.split(" | ")  # structure : 0^serial -- 1^information
             n2 = n1[1].split(" ; ")  # structure : 0^detectionTime -- 1^values -- 2^confiance -- 3^1 -- 4^affinite -- 5^bruit -- 6^id_target or 0^detectionTime -- 1^values -- 2^confiance -- 3^1 -- 4^time -- 5^0
             n3 = n2[1].split(" * ")  # structure : 0^x -- 1^y -- 2^z -- 3^length -- 4^width -- 5^area -- 6^H -- 7^S -- 8^V
-            if n2[5] == "0":  # new target here
+            if float(n2[5]) == 0:  # new target here
                 point = Point2()
                 point.time = n2[4]
                 point.length = n3[3]
@@ -67,15 +71,17 @@ class Tools:
                 point.z = n3[2]
                 point.width = n3[4]
                 point.target_id = n2[4]
-                argets [n2[4]] = Target(n2[4])
-                targets[n2[4]].addPoint(point)
+                targets.append(point)  # contains all the target initiations
+                # targets[point.target_id] = Target(n2[4])
+                # targets[point.target_id].addPoint(point)
+                del point
             else:
                 point = Point2()
                 point.time = n2[0]
                 point.length = n3[3]
                 point.affinite = n2[4]
                 point.area = n3[3]
-                point.bruit = n2[6]
+                point.bruit = n2[5]
                 point.confiance = n2[2]
                 point.S = n3[7]
                 point.H = n3[6]
@@ -84,8 +90,41 @@ class Tools:
                 point.y = n3[1]
                 point.z = n3[2]
                 point.width = n3[4]
-                point.target_id = n2[6]
-                targets[n2[4]].addPoint(point)
-        for t in targets.values():
+                point.target_id = n2[6][:13]
+                points.append(point)
+                """print (point.target_id)
+                targets[point.target_id].addPoint(point)
+                del point"""
+        # points = sorted(points, key=get_id)  # at this moment, the list is sorted by target id
+        tarTemp = Target("")
+        targets = sorted(targets, key=self.get_id)  # same
+        print(points.__len__())
+        print(targets.__len__(), "\n\n")  # CA MARCHE
+        for t in targets:         # CA MARCHE PAS -> dans les 6 lignes qui suivent.
+            # tarTemp = Target(d)
+            # print(tarTemp.points.__len__())
+            # tarTemp.addPoint(t)
+            # print(tarTemp.points.__len__())
+            # tarTemp.id = t.target_id
+            # tarTemp.clean()
+            # tarTemp.addPoint(t)
+            # for p in points:
+            #     if p.target_id == t.target_id:
+            #         tarTemp.addPoint(p)
+            #         print("sdfsqjhqsmdfoljsqmfl")
+            # print(tarTemp.points.__len__())
+            # result.appendTarget(tarTemp)
+            # changement de strategie: on va entrer les points direct dans le result
+            # result.appendTarget(Target(t.target_id))
+            result.addListTarget(t.target_id)
+        result.okcestbon()
+        for p in points:
+            result.addPoint(p)
+        """for t in targets.values():
             result.append(t)
+            print(t)
+            print(t.points.__len__())"""
         return result
+
+    def get_id(self, point):
+        return point.target_id

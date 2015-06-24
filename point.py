@@ -38,7 +38,7 @@ class Point:
         print(self.x , self.y , self.z, self.time, self.h, self.h, self.w, self.H, self.S, self.V)
 
     def printMe(self, f):
-        print(self.x , self.y , self.z, self.time, self.h, self.h, self.w, self.H, self.S, self.V, file=f)
+        print(self.x , self.y , self.z, self.time, self.length, self.width, self.H, self.S, self.V, self.area, self.confiance, self.affinite, self.bruit, file=f)
 
     def getZ(self):
         return float(self.z)
@@ -71,7 +71,8 @@ class Point2:
         return self.target_id
 
     def printMe(self, f):
-        print(self.time, self.x, self.y, self.z, self.h, self.s, self.v, self.area, self.confiance, self.affinite, self.bruit)
+        print(self.x, self.y, self.z, self.H, self.S, self.V, self.area, self.confiance, self.affinite, self.bruit, self.target_id, file=f)
+        # print(self.target_id, file = f)
 
     def getZ(self):
         return float(self.z)

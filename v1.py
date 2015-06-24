@@ -52,8 +52,10 @@ settings.addDrone(tools.openYml("drones.yml"))
 data = Donnees("main test")
 f = open("testDonnees.txt", "w")
 
-t = tools.openBackup()
-data.appendResult("history10", t)
+# t = tools.openBackup()
+t = tools.import_targets()
+t.printMe(f)
+# data.appendResult("history10", t)
 data.printMe(f)
 
 
@@ -61,7 +63,7 @@ a = {}  # dictionary of analysis
 xls = Xlswriter()
 
 
-""" --- history --- + --- 10 to 100 --- """
+""" --- history --- + --- 10 to 100 --- ""
 i = 10
 while i < 110:
     stri = "history"
@@ -74,7 +76,7 @@ while i < 110:
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 20
-""" --- points_min --- + --- 3 to 15 --- ""
+"" --- points_min --- + --- 3 to 15 --- ""
 i = 3
 while i < 15:
     stri = "points_min"
@@ -143,7 +145,7 @@ while i < 52:
 
 """ et maintenant, petite seance de visionnage de CAM3 des familles."""
 
-i = 10
+"""i = 10
 while i < 110:
     name = "history" + str(i)
     # subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading CAM3 and closing it at the end
@@ -154,7 +156,7 @@ while i < 110:
     xls.add_analysis(a[name], name, i)
     i += 20
 
-"""i = 3
+i = 3
 while i < 15:
     name = "points_min" + str(i)
     subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading CAM3 and closing it at the end
