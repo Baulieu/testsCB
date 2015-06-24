@@ -48,3 +48,34 @@ class Point:
 
     def getTime(self):
         return float(self.time)
+
+class Point2:
+
+    def __init__(self):
+        self.time = None
+        self.x = None
+        self.y = None
+        self.z = None
+        self.h = None
+        self.s = None
+        self.v = None
+        self.area = None
+        self.confiance = None
+        self.affinite = None
+        self.bruit = None
+        self.target_id
+
+    def whichTarget(self):
+        return self.target_id
+
+    def printMe(self, f):
+        print(self.time, self.x, self.y, self.z, self.h, self.s, self.v, self.area, self.confiance, self.affinite, self.bruit)
+
+    def getZ(self):
+        return float(self.z)
+
+    def getHeight(self):
+        return float(self.h)
+
+    def getTime(self):
+        return self.time
