@@ -4,7 +4,6 @@
     <list default="true" id="d6cecf29-5423-4f07-a8ed-c46367a6b557" name="Default" comment="corrections mineures&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/point.py" afterPath="$PROJECT_DIR$/point.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools.py" afterPath="$PROJECT_DIR$/tools.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,16 +65,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="point.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="point.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/point.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94308037">
-              <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
               <folding>
                 <element signature="e#192#447#0" expanded="false" />
                 <element signature="e#497#813#0" expanded="false" />
                 <element signature="e#1263#1286#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tools.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73995537">
+              <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,16 +117,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tools.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="122" selection-start-line="51" selection-start-column="122" selection-end-line="51" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -160,11 +159,11 @@
         <option value="$PROJECT_DIR$/parameters.py" />
         <option value="$PROJECT_DIR$/analysis.py" />
         <option value="$PROJECT_DIR$/xlswriter.py" />
-        <option value="$PROJECT_DIR$/tools.py" />
         <option value="$PROJECT_DIR$/result.py" />
         <option value="$PROJECT_DIR$/target.py" />
         <option value="$PROJECT_DIR$/v1.py" />
         <option value="$PROJECT_DIR$/point.py" />
+        <option value="$PROJECT_DIR$/tools.py" />
       </list>
     </option>
   </component>
@@ -212,6 +211,50 @@
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.4.3 (C:\Python34\python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.4.3 (C:\Python34\python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python-skeletons" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyUserSkeletonsNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.4.3 (C:\Python34\python.exe) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python-skeletons" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyUserSkeletonsNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="multiprocessing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -232,7 +275,7 @@
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="SearchEverywhereHistoryKey" value="target&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/target.py&#10;poin&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;too&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/tools.py&#10;analys&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;para&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;analy&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;par&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;v1&#9;RUN_CONFIGURATION&#9;v1&#10;carac&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/caracteristiques_video.yml&#10;ana&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;openB&#9;null&#9;null&#10;appendRe&#9;null&#9;null&#10;v&amp;&#9;null&#9;null&#10;donn&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/donnees.py&#10;an&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;point&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;v&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/v1.py&#10;Analy&#9;null&#9;null&#10;test&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/testDonnees.txt&#10;main&#9;null&#9;null&#10;backup&#9;null&#9;null&#10;points&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="to&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/tools.py&#10;resul&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/result.py&#10;targ&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/target.py&#10;point2&#9;null&#9;null&#10;target&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/target.py&#10;poin&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;too&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/tools.py&#10;analys&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;para&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;analy&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;par&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;v1&#9;RUN_CONFIGURATION&#9;v1&#10;carac&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/caracteristiques_video.yml&#10;ana&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;openB&#9;null&#9;null&#10;appendRe&#9;null&#9;null&#10;v&amp;&#9;null&#9;null&#10;donn&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/donnees.py&#10;an&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;point&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;v&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/v1.py&#10;Analy&#9;null&#9;null&#10;test&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/testDonnees.txt&#10;main&#9;null&#9;null&#10;backup&#9;null&#9;null&#10;points&#9;null&#9;null" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Python.v1">
@@ -524,33 +567,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/point.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding>
-            <element signature="e#192#447#0" expanded="false" />
-            <element signature="e#497#813#0" expanded="false" />
-            <element signature="e#1263#1286#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donnees.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testDonnees.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/outside.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -893,6 +909,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+          <folding>
+            <element signature="e#1972#2428#0" expanded="false" />
+            <element signature="e#2503#2574#0" expanded="false" />
+            <element signature="e#2610#2875#0" expanded="false" />
+            <element signature="e#2977#4172#0" expanded="false" />
+            <element signature="e#4261#4505#0" expanded="false" />
+            <element signature="e#4537#4844#0" expanded="false" />
+            <element signature="e#4877#5180#0" expanded="false" />
+            <marker date="1435133375485" expanded="true" signature="117:399" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -904,19 +937,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools.py">
+    <entry file="file://$PROJECT_DIR$/xlswriter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="122" selection-start-line="51" selection-start-column="122" selection-end-line="51" selection-end-column="122" />
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result.py">
+    <entry file="file://$PROJECT_DIR$/point.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding>
+            <element signature="e#192#447#0" expanded="false" />
+            <element signature="e#497#813#0" expanded="false" />
+            <element signature="e#1263#1286#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -938,40 +975,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xlswriter.py">
+    <entry file="file://C:/Python34/DLLs/py.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/asyncio/events.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analysis.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/multiprocessing/managers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-          <folding>
-            <element signature="e#1972#2428#0" expanded="false" />
-            <element signature="e#2503#2574#0" expanded="false" />
-            <element signature="e#2610#2875#0" expanded="false" />
-            <element signature="e#2977#4172#0" expanded="false" />
-            <element signature="e#4261#4505#0" expanded="false" />
-            <element signature="e#4537#4844#0" expanded="false" />
-            <element signature="e#4877#5180#0" expanded="false" />
-            <marker date="1435133375485" expanded="true" signature="117:399" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.14620535">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/point.py">
+    <entry file="file://$PROJECT_DIR$/result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94308037">
-          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-          <folding>
-            <element signature="e#192#447#0" expanded="false" />
-            <element signature="e#497#813#0" expanded="false" />
-            <element signature="e#1263#1286#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73995537">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

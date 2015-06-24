@@ -56,14 +56,16 @@ class Point2:
         self.x = None
         self.y = None
         self.z = None
-        self.h = None
-        self.s = None
-        self.v = None
+        self.length = None
+        self.width = None
+        self.H = None
+        self.S = None
+        self.V = None
         self.area = None
         self.confiance = None
         self.affinite = None
         self.bruit = None
-        self.target_id
+        self.target_id = None
 
     def whichTarget(self):
         return self.target_id
@@ -75,7 +77,7 @@ class Point2:
         return float(self.z)
 
     def getHeight(self):
-        return float(self.h)
+        return float(self.length)
 
     def getTime(self):
         return self.time
