@@ -67,8 +67,8 @@ class Tools:
                 point.z = n3[2]
                 point.width = n3[4]
                 point.target_id = n2[4]
-                targets [n2[4]] = Target(n2[4])
-                targets [n2[4]].addPoint(point)
+                argets [n2[4]] = Target(n2[4])
+                targets[n2[4]].addPoint(point)
             else:
                 point = Point2()
                 point.time = n2[0]
@@ -85,29 +85,7 @@ class Tools:
                 point.z = n3[2]
                 point.width = n3[4]
                 point.target_id = n2[6]
-                targets [n2[4]].addPoint(point)
+                targets[n2[4]].addPoint(point)
         for t in targets.values():
             result.append(t)
         return result
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
