@@ -186,7 +186,7 @@ class Tools:
         with open("1435075953418_perf.txt") as f:
             temp = f.readlines()
         for line in temp:
-            n = line.split(" | ")
+            n = line.split("|  ")
             n = n[1].split(" ; ")
             result.append((n[0], n[1], n[3], n[4]))
         return result
