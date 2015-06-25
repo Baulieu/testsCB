@@ -1,6 +1,7 @@
-history 20 10 20 5
-points_min 3 3 3 5
-surface_min 5 5 10 5
-between_target 6000 100 1000 10
-distance_3d 2 0.5 0.5 10
-size_min 40 2 5 10
+coef1 10 5 2 5
+coef2 10 5 2 5
+coef3 10 5 2 5
+coef4 10 5 2 5
+coef5 10 5 2 5
+coef8 0 0 1 5
+coef12 10 5 2 5

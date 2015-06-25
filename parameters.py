@@ -29,7 +29,7 @@ class Parameters:
     def addDrone(self, drone):
         self.drone = drone
 
-    def change(self, changed, value):
+    def change_old(self, changed, value):
         # str = "changing", changed, "to", value
         print("changing", changed, "to", value, "...")
         if changed == "history":
@@ -59,6 +59,11 @@ class Parameters:
                 break
             i += 1
             file.seek(i)
+
+    def change(self, changed, value):
+        print("changing", changed, "to", value, "...")
+        self.write(open("v2/parameters.yml", encoding="cp1252", mode="r+"), changed, value)
+        print("done")
 
     def getNbTargetsTheo(self):
         i = 0
