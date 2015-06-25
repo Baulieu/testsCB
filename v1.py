@@ -90,6 +90,7 @@ for v in var:
             raise NameError("arret volontaire du processus. For the watch.")
         a[name].addFalsep(temp)  # sending it to the analysis module
         xls.add_analysis(a[name], name, i)
+        i += v[3]
 
 
 """ --- history --- + --- 10 to 100 --- ""

@@ -45,7 +45,7 @@ class Parameters:
                 # if i == 1:
                 #     data["MOG2"][changed] = value
                 # i += 1
-            self.write(open("drones.yml", "r+"), changed, value)
+            self.write(open("drones.yml", encoding="cp1252", mode="r+"), changed, value)
         print("done")
 
     def write(self, file, item, value):
