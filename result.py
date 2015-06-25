@@ -32,6 +32,7 @@ class Result:
             if t.getId() == new.target_id:
                 t.addPoint(new)
 
+
 class Result2:
 
     def __init__(self):
@@ -41,14 +42,9 @@ class Result2:
     def printMe(self, f):
         self.targets.sort()
         for t in self.targets:
-            print("  ")
-            print(t)
+            print("\n", t, file = f)
             for p in self.liste[t]:
                 p.printMe(f)
-        # for key, value in self.liste.items():
-        #     print ("\n\n\n", key)
-        #     for p in value:
-        #         p.printMe(f)
 
     def add_target(self, p):
         self.liste[p.target_id] = []

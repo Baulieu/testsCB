@@ -48,11 +48,10 @@ settings = Parameters(tools.openYml("caracteristiques_video.yml"))
 settings.addOut(tools.openYml("outside.yml"))
 settings.addDrone(tools.openYml("drones.yml"))
 
-
+# TODO clear next lines to clean the project of any testing line ( until line a = {} )
 data = Donnees("main test")
 f = open("testDonnees.txt", "w")
 
-# t = tools.openBackup()
 t = tools.import_result()
 t.printMe(f)
 # data.appendResult("history10", t)
