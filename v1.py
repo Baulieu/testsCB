@@ -92,7 +92,7 @@ for v in var:
         xls.add_analysis(a[name], name, i)
 
 
-""" --- history --- + --- 10 to 100 --- """
+""" --- history --- + --- 10 to 100 --- ""
 i = 10
 while i < 110:
     stri = "history"
@@ -106,7 +106,7 @@ while i < 110:
     a[name].addResult(t)
     # subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 20
-""" --- points_min --- + --- 3 to 15 --- """
+"" --- points_min --- + --- 3 to 15 --- ""
 i = 3
 while i < 15:
     stri = "points_min"
@@ -120,7 +120,7 @@ while i < 15:
     a[name].addResult(t)
     # subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 3
-""" --- surface_min --- + --- 5 to 50 --- """
+"" --- surface_min --- + --- 5 to 50 --- ""
 i = 5
 while i < 55:
     stri = "surface_min"
@@ -134,7 +134,7 @@ while i < 55:
     a[name].addResult(t)
     # subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 10
-""" --- between_target --- ++ --- 100 to 1000 --- """
+"" --- between_target --- ++ --- 100 to 1000 --- ""
 i = 100
 while i < 1000:
     stri = "between_target"
@@ -148,7 +148,7 @@ while i < 1000:
     a[name].addResult(t)
     # subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 100
-""" --- distance_3d and distance_pixel --- ++ --- 0.5 to 5 and 20 to 200 --- """
+"" --- distance_3d and distance_pixel --- ++ --- 0.5 to 5 and 20 to 200 --- ""
 i = 0.5
 while i < 5:
     stri = "distance_3d"
@@ -163,7 +163,7 @@ while i < 5:
     a[name].addResult(t)
     # subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 0.5
-""" --- size_min --- ++ --- 2 to 50 --- """
+"" --- size_min --- ++ --- 2 to 50 --- ""
 i = 2
 while i < 52:
     stri = "size_min"
@@ -178,7 +178,7 @@ while i < 52:
     # subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 5
 
-""" et maintenant, petite seance de visionnage de CAM3 des familles."""
+"" et maintenant, petite seance de visionnage de CAM3 des familles.""
 
 i = 10
 while i < 110:
@@ -244,7 +244,7 @@ while i < 52:
         raise NameError('arret volontaire du processus. For the watch.')
     a[name].addFalsep(temp)  # sending it to the analysis module
     xls.add_analysis(a[name], name, i)
-    i += 5
+    i += 5"""
 
 xls.write()
 

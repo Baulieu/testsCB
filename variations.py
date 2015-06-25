@@ -17,8 +17,9 @@ class Variations:
             temp = f.readlines()
         f.close()
         for line in temp:
+            print(line)
             line = line.split(" ")
-            self.parameters.append((line[0], line[1], line[2], line[3], line[4], line[5]))
+            self.parameters.append((line[0], float(line[1]), float(line[2]), float(line[3]), float(line[4])))
 
 
     def __iter__(self):
