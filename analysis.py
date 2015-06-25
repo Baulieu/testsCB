@@ -43,15 +43,15 @@ class Analysis:
 
     def calcImgs(self):  # frames analyzed per second -> Not yet
         temp = []
-        for t in self.result:
-            if t.getId() not in temp:
-                temp.append(t.getId())
+        for t in self.result.liste.keys():
+            if t not in temp:
+                temp.append(t)
         return temp.__len__()  # return it divided by fps and duration
 
     def calcProfondeur(self):  # success proportion for depth recuperation -> Ok
         i = 0
         j = 0
-        for t in self.result:
+        for t in self.result.liste.values():
             for p in t:
                 if p.getZ() ==0:
                     i += 1
@@ -64,7 +64,7 @@ class Analysis:
     def calcFiabTaille(self, alpha):  # reliability of height -> Ok
         j = 0
         n = 0
-        for t in self.result:
+        for t in self.result.liste.values():
             moy = 0
             i = 0
             for p in t:
@@ -83,14 +83,14 @@ class Analysis:
 
     def calcNbTargets(self):  # number of detected targets -> Ok
         i = 0
-        for t in self.result:
+        for t in self.result.liste.values():
             i += 1
         return i
 
     def calcNbPoints(self):
       # number of detected pictures -> Ok
         i = 0
-        for t in self.result:
+        for t in self.result.liste.values():
             for p in t:
                 i += 1
         if self.settings.getNbTargetsTheo() != 0:
@@ -102,18 +102,18 @@ class Analysis:
         # mode opératoire: savoir quand sont les frames analysées, pour chaque target ranger ses points dans les intervalles .on part du premier, on va au dernier. à chaque fois qu'on passe de True à False, on incrémente, et on enlève une fois à la fin pour ne pas compter la disparition normal de la cible. Et paf, ça fait des chocapics.
         # temporary : detection of analyzed frames using timecodes -> stock them in a list and use it as a list of intervals /!\ stock timecodes // 10 to prevent slight differences!
         inter = []
-        for t in self.result:
+        for t in self.result.liste.values():
             for p in t:
-                if p.getTime()//10 not in inter:
-                    inter.append(p.getTime()//10)
+                if float(p.getTime())//10 not in inter:
+                    inter.append(float(p.getTime())//10)
         inter.sort()
         # end of temporary code -> we've got a list of all timecodes used by the program.
         pertes = 0
         temp = []
-        for t in self.result:
+        for t in self.result.liste.values():
             i = 0
             for p in t:
-                while p.getTime() // 10 < inter[i]:
+                while float(p.getTime()) // 10 < inter[i]:
                     i += 1
                 temp.append(i)
             temp.sort()

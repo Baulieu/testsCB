@@ -4,18 +4,18 @@
 class Point:
 
     def __init__(self,target, time, frame, x, y, z, h, w, H, S, V, surface):
-        self.target = target
-        self.time = time
-        self.frame = frame
-        self.x = x
-        self.y = y
-        self.z = z
-        self.h = h
-        self.w = w
-        self.H = H
-        self.S = S
-        self.V = V
-        self.surface = surface
+        self.target = float(target)
+        self.time = float(time)
+        self.frame = float(frame)
+        self.x = float(x)
+        self.y = float(y)
+        self.z = float(z)
+        self.h = float(h)
+        self.w = float(w)
+        self.H = float(H)
+        self.S = float(S)
+        self.V = float(V)
+        self.surface = float(surface)
 
     def __init__(self, target, string):
         self.target = target
@@ -47,7 +47,7 @@ class Point:
         return float(self.h)
 
     def getTime(self):
-        return float(self.time)
+        return self.time
 
 class Point2:
 

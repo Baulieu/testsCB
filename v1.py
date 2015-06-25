@@ -62,20 +62,20 @@ a = {}  # dictionary of analysis
 xls = Xlswriter()
 
 
-""" --- history --- + --- 10 to 100 --- ""
+""" --- history --- + --- 10 to 100 --- """
 i = 10
 while i < 110:
     stri = "history"
     name = stri + str(i)
     settings.change(stri, i)
     # subprocess.call(['./exe'])
-    t = tools.openBackup()
+    t = tools.import_result()
     data.appendResult(name, t)
     a[name] = Analysis(name, settings)
     a[name].addResult(t)
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 20
-"" --- points_min --- + --- 3 to 15 --- ""
+""" --- points_min --- + --- 3 to 15 --- ""
 i = 3
 while i < 15:
     stri = "points_min"
@@ -144,7 +144,7 @@ while i < 52:
 
 """ et maintenant, petite seance de visionnage de CAM3 des familles."""
 
-"""i = 10
+i = 10
 while i < 110:
     name = "history" + str(i)
     # subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading CAM3 and closing it at the end
@@ -155,7 +155,7 @@ while i < 110:
     xls.add_analysis(a[name], name, i)
     i += 20
 
-i = 3
+"""i = 3
 while i < 15:
     name = "points_min" + str(i)
     subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading CAM3 and closing it at the end
