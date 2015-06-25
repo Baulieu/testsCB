@@ -53,7 +53,7 @@ data = Donnees("main test")
 f = open("testDonnees.txt", "w")
 
 # t = tools.openBackup()
-t = tools.import_targets()
+t = tools.import_result()
 t.printMe(f)
 # data.appendResult("history10", t)
 data.printMe(f)

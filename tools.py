@@ -9,7 +9,7 @@ except ImportError:
     from yaml import Loader, Dumper
 from target import Target
 from point import Point, Point2
-from result import Result
+from result import Result, Result2
 
 
 class Tools:
@@ -128,3 +128,54 @@ class Tools:
 
     def get_id(self, point):
         return point.target_id
+
+    def import_result(self):
+        result = Result2()
+        with open("1435075953418_target.txt") as f:
+            temp = f.readlines()
+        f.close()
+        # open ("1435075953418_target.txt", "w").close()  # TODO uncomment to activate backup refresh
+        for line in temp:
+            n1 = line.split(" | ")  # structure : 0^serial -- 1^information
+            n2 = n1[1].split(" ; ")  # structure : 0^detectionTime -- 1^values -- 2^confiance -- 3^1 -- 4^affinite -- 5^bruit -- 6^id_target or 0^detectionTime -- 1^values -- 2^confiance -- 3^1 -- 4^time -- 5^0
+            n3 = n2[1].split(" * ")  # structure : 0^x -- 1^y -- 2^z -- 3^length -- 4^width -- 5^area -- 6^H -- 7^S -- 8^V
+            if float(n2[5]) == 0:  # new target here
+                point = Point2()
+                point.time = n2[4]
+                point.length = n3[3]
+                # point.affinite -> not in this kind of point!
+                point.area = n3[3]
+                # point.bruit -> not in this kind of point!
+                point.confiance = n2[2]
+                point.S = n3[7]
+                point.H = n3[6]
+                point.V = n3[8]
+                point.x = n3[0]
+                point.y = n3[1]
+                point.z = n3[2]
+                point.width = n3[4]
+                point.target_id = n2[4]
+                # targets.append(point)  # contains all the target initiations
+                # targets[point.target_id] = Target(n2[4])
+                # targets[point.target_id].addPoint(point)
+                result.add_target(point)
+                del point
+            else:
+                point = Point2()
+                point.time = n2[0]
+                point.length = n3[3]
+                point.affinite = n2[4]
+                point.area = n3[3]
+                point.bruit = n2[5]
+                point.confiance = n2[2]
+                point.S = n3[7]
+                point.H = n3[6]
+                point.V = n3[8]
+                point.x = n3[0]
+                point.y = n3[1]
+                point.z = n3[2]
+                point.width = n3[4]
+                point.target_id = n2[6][:13]
+                result.add_point(point)
+                # points.append(point)
+        return result
