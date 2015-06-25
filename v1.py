@@ -73,6 +73,7 @@ while i < 110:
     data.appendResult(name, t)
     a[name] = Analysis(name, settings)
     a[name].addResult(t)
+    a[name].add_frames(tools.import_perf())
     subprocess.call(['cp', 'cam3.avi', 'results/'+name+'.avi'])
     i += 20
 """ --- points_min --- + --- 3 to 15 --- ""

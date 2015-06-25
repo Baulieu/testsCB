@@ -179,3 +179,14 @@ class Tools:
                 result.add_point(point)
                 # points.append(point)
         return result
+
+    def import_perf(self):  # adds the information contained in the perf file to the result -> add a "add_perf" method in result
+        # return a list of tuples: (number, svo_frame, end_time, environment)
+        result = []
+        with open("1435075953418_perf.txt") as f:
+            temp = f.readlines()
+        for line in temp:
+            n = line.split(" | ")
+            n = n[1].split(" ; ")
+            result.append((n[0], n[1], n[3], n[4]))
+        return result

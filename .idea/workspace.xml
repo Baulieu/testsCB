@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6cecf29-5423-4f07-a8ed-c46367a6b557" name="Default" comment="corrections mineures&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xlswriter.py" afterPath="$PROJECT_DIR$/xlswriter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analysis.py" afterPath="$PROJECT_DIR$/analysis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools.py" afterPath="$PROJECT_DIR$/tools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/v1.py" afterPath="$PROJECT_DIR$/v1.py" />
     </list>
     <ignored path="tests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/v1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+              <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
               <folding>
                 <element signature="e#493#516#0" expanded="true" />
               </folding>
@@ -36,37 +37,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xlswriter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/xlswriter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5617816">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="analysis.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="analysis.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="125" column="38" selection-start-line="125" selection-start-column="38" selection-end-line="125" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.7816092">
+              <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
               <folding>
-                <element signature="e#4645#4952#0" expanded="false" />
-                <element signature="e#4985#5288#0" expanded="false" />
-                <marker date="1435221235657" expanded="true" signature="117:399" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="point.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/point.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-              <folding>
-                <element signature="e#192#531#0" expanded="false" />
+                <marker date="1435224678742" expanded="true" signature="117:399" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -76,10 +53,11 @@
         <entry file="file://$PROJECT_DIR$/tools.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="180" column="21" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
+              <caret line="191" column="21" selection-start-line="191" selection-start-column="21" selection-end-line="191" selection-end-column="21" />
               <folding>
                 <element signature="e#61#86#0" expanded="true" />
                 <element signature="e#657#1607#0" expanded="false" />
+                <element signature="e#5342#7536#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -153,13 +131,13 @@
         <option value="$PROJECT_DIR$/donnees.py" />
         <option value="$PROJECT_DIR$/testDonnees.txt" />
         <option value="$PROJECT_DIR$/parameters.py" />
-        <option value="$PROJECT_DIR$/analysis.py" />
         <option value="$PROJECT_DIR$/target.py" />
         <option value="$PROJECT_DIR$/point.py" />
-        <option value="$PROJECT_DIR$/tools.py" />
-        <option value="$PROJECT_DIR$/v1.py" />
         <option value="$PROJECT_DIR$/result.py" />
         <option value="$PROJECT_DIR$/xlswriter.py" />
+        <option value="$PROJECT_DIR$/tools.py" />
+        <option value="$PROJECT_DIR$/v1.py" />
+        <option value="$PROJECT_DIR$/analysis.py" />
       </list>
     </option>
   </component>
@@ -552,6 +530,7 @@
           <folding>
             <element signature="e#61#86#0" expanded="true" />
             <element signature="e#657#1607#0" expanded="false" />
+            <element signature="e#5342#7536#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -561,9 +540,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4645#4952#0" expanded="false" />
-            <element signature="e#4985#5288#0" expanded="false" />
-            <marker date="1435221235657" expanded="true" signature="117:399" placeholder="..." />
+            <marker date="1435224678742" expanded="true" signature="117:399" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -636,6 +613,7 @@
           <folding>
             <element signature="e#61#86#0" expanded="true" />
             <element signature="e#657#1607#0" expanded="false" />
+            <element signature="e#5342#7536#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -689,6 +667,7 @@
           <folding>
             <element signature="e#61#86#0" expanded="true" />
             <element signature="e#657#1607#0" expanded="false" />
+            <element signature="e#5342#7536#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -736,6 +715,7 @@
           <folding>
             <element signature="e#61#86#0" expanded="true" />
             <element signature="e#657#1607#0" expanded="false" />
+            <element signature="e#5342#7536#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -836,27 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-          <folding>
-            <element signature="e#923#1577#0" expanded="false" />
-            <element signature="e#1627#1925#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/point.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-          <folding>
-            <element signature="e#192#531#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -902,24 +861,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools.py">
+    <entry file="file://$PROJECT_DIR$/xlswriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="180" column="21" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
-          <folding>
-            <element signature="e#61#86#0" expanded="true" />
-            <element signature="e#657#1607#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-          <folding>
-            <element signature="e#493#516#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.5617816">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,23 +885,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analysis.py">
+    <entry file="file://$PROJECT_DIR$/parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="38" selection-start-line="125" selection-start-column="38" selection-end-line="125" selection-end-column="38" />
+          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
           <folding>
-            <element signature="e#4645#4952#0" expanded="false" />
-            <element signature="e#4985#5288#0" expanded="false" />
-            <marker date="1435221235657" expanded="true" signature="117:399" placeholder="..." />
+            <element signature="e#923#1577#0" expanded="false" />
+            <element signature="e#1627#1925#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xlswriter.py">
+    <entry file="file://$PROJECT_DIR$/point.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5617816">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding />
+        <state vertical-scroll-proportion="0.50574714">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="14" />
+          <folding>
+            <element signature="e#192#531#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="191" column="21" selection-start-line="191" selection-start-column="21" selection-end-line="191" selection-end-column="21" />
+          <folding>
+            <element signature="e#61#86#0" expanded="true" />
+            <element signature="e#657#1607#0" expanded="false" />
+            <element signature="e#5342#7536#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
+          <folding>
+            <element signature="e#493#516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7816092">
+          <caret line="128" column="35" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
+          <folding>
+            <marker date="1435224678742" expanded="true" signature="117:399" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -16,6 +16,7 @@ class Analysis:
         self.nbPertes = None
         self.perf = 0
         self.settings = settings
+        self.frames = []
 
         """def __init__(self, name, result):
         self.name = name
@@ -40,6 +41,9 @@ class Analysis:
         self.nbTargets = self.calcNbTargets()
         self.nbPoints = self.calcNbPoints()
         self.nbPertes = self.calcNbPertes()
+
+    def add_frames(self, frames):
+        self.frames = frames
 
     def calcImgs(self):  # frames analyzed per second -> Not yet
         temp = []
@@ -101,7 +105,7 @@ class Analysis:
     def calcNbPertes(self):  # how many times a target has been lost during detection -> No
         # mode opératoire: savoir quand sont les frames analysées, pour chaque target ranger ses points dans les intervalles .on part du premier, on va au dernier. à chaque fois qu'on passe de True à False, on incrémente, et on enlève une fois à la fin pour ne pas compter la disparition normal de la cible. Et paf, ça fait des chocapics.
         # temporary : detection of analyzed frames using timecodes -> stock them in a list and use it as a list of intervals /!\ stock timecodes // 10 to prevent slight differences!
-        inter = []
+        """inter = []
         for t in self.result.liste.values():
             for p in t:
                 if float(p.getTime())//10 not in inter:
@@ -121,7 +125,8 @@ class Analysis:
             while i < temp.__len__() - 1:
                 pertes += temp[i + 1] - temp[i] - 1
                 i += 1
-        return pertes
+        return pertes"""
+        return self.frames.__len__()
 
     def perfIndice(self):  # note sur 12 -> super sensible aux faux positifs!!
         result = self.imgs / 60
