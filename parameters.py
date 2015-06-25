@@ -16,6 +16,9 @@ class Parameters:
             raise ValueError('trop de parametres dans le fichier caracteristiques_video.yml.\nIl doit y'
                              ' avoir:\n  -> nom\n  -> nonCam3\n  -> fps\n  -> serial\n  -> convergence\n  -> targets')
 
+    def __init__(self):
+        self.alive = True
+
     def fill(self, dic):
         self.settings = dic
 

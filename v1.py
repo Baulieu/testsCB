@@ -28,7 +28,7 @@ debut = time.time()
 
 """importing parameters files"""
 tools = Tools()
-settings = Parameters(tools.openYml("caracteristiques_video.yml"))
+#settings = Parameters(tools.openYml("caracteristiques_video.yml"))
 
 """ parameters management strategy:
     - each file is loaded as a canvas.
@@ -46,8 +46,9 @@ settings = Parameters(tools.openYml("caracteristiques_video.yml"))
 # >>> subprocess.call(['cp', 'cam3.avi', 'results/new name.avi'])
 # >>> subprocess.call(['vlc', 'name.avi', 'vlc://quit'])
 
-settings.addOut(tools.openYml("outside.yml"))
-settings.addDrone(tools.openYml("drones.yml"))
+#settings.addOut(tools.openYml("outside.yml"))
+#settings.addDrone(tools.openYml("drones.yml"))
+settings = Parameters()
 
 # TODO clear next lines to clean the project of any testing line ( until line a = {} )
 data = Donnees("main test")
@@ -74,7 +75,7 @@ for v in var:
         # subprocess.call(['./exe'])
         t = tools.import_result()
         data.appendResult(name, t)
-        a[name] = Analysis(name, settings)
+        a[name] = Analysis(v[0], settings)
         a[name].add_frames(tools.import_perf())
         a[name].addResult(t)
         # subprocess.call(['cp', 'video.avi', 'results/'+name+'.avi'])
@@ -89,7 +90,7 @@ for v in var:
         if temp == "exit":
             raise NameError("arret volontaire du processus. For the watch.")
         a[name].addFalsep(temp)  # sending it to the analysis module
-        xls.add_analysis(a[name], name, i)
+        xls.add_analysis(a[name], v[0], i)
         i += v[3]
 
 

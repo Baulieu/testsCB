@@ -13,7 +13,7 @@ class Xlswriter:
     def add_analysis(self, analysis, name, i):  # adds one single analysis -> best way
         self.full_analysis.append((name, i, analysis))
 
-    def write(self):
+    def write_old(self):
         workbook = xlsxwriter.Workbook('analyse.xlsx')
         data = workbook.add_worksheet('data')
         i = 0
@@ -89,4 +89,21 @@ class Xlswriter:
         charts.insert_chart('S18', chartDist3d)
         charts.insert_chart('C18', chartBetweenTargets)
         charts.insert_chart('K18', chartSurfMin)
+        workbook.close()
+
+    def write(self):
+        workbook = xlsxwriter.Workbook('analyse.xlsx')
+        data = workbook.add_worksheet('data')
+        i = 0
+        for a in self.full_analysis:
+            data.write(1, i, a[0])
+            data.write(3, i, a[1])
+            data.write(4, i, a[2].imgs)
+            data.write(5, i, a[2].tauxProfondeur)
+            data.write(6, i, a[2].fiabiliteTaille)
+            data.write(7, i, a[2].nbTargets)
+            data.write(8, i, a[2].nbPoints)
+            data.write(9, i, a[2].nbPertes)
+            data.write(10, i, a[2].perf)
+            i += 1
         workbook.close()
