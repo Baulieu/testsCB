@@ -17,6 +17,7 @@ class Xlswriter:
         workbook = xlsxwriter.Workbook('analyse.xlsx')
         data = workbook.add_worksheet('data')
         i = 1
+        data.write(1, 1, "test")
         for a in self.full_analysis:
             data.write(2, i, a[0])
             data.write(4, i, a[1])
