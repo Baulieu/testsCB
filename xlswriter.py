@@ -16,18 +16,17 @@ class Xlswriter:
     def write(self):
         workbook = xlsxwriter.Workbook('analyse.xlsx')
         data = workbook.add_worksheet('data')
-        i = 1
-        data.write(1, 1, "test")
+        i = 0
         for a in self.full_analysis:
-            data.write(2, i, a[0])
-            data.write(4, i, a[1])
-            data.write(5, i, a[2].imgs)
-            data.write(6, i, a[2].tauxProfondeur)
-            data.write(7, i, a[2].fiabiliteTaille)
-            data.write(8, i, a[2].nbTargets)
-            data.write(9, i, a[2].nbPoints)
-            data.write(10, i, a[2].nbPertes)
-            data.write(11, i, a[2].perf)
+            data.write(1, i, a[0])
+            data.write(3, i, a[1])
+            data.write(4, i, a[2].imgs)
+            data.write(5, i, a[2].tauxProfondeur)
+            data.write(6, i, a[2].fiabiliteTaille)
+            data.write(7, i, a[2].nbTargets)
+            data.write(8, i, a[2].nbPoints)
+            data.write(9, i, a[2].nbPertes)
+            data.write(10, i, a[2].perf)
             i += 1
         charts = workbook.add_worksheet('charts')
         chartHistory = workbook.add_chart({'type': 'column'})
