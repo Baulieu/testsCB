@@ -11,7 +11,7 @@ Zed:
    reliability: 96                                           #     
 
 MOG2:
-   history: 20                                               # Au bout de cb d'image on considère une cible qui n'a plus bougée comme faisant partie du fond.
+   history: 20                      ##                         # Au bout de cb d'image on considère une cible qui n'a plus bougée comme faisant partie du fond.
    varThreshold: 16                                          #
    nmixtures: 3                                              # Mixtures Gaussiennes  
    shadowvalue: 0                                            #
@@ -23,20 +23,20 @@ MOG2:
    nShadowDetection: 127                                     #
 
 Detection:
-   points_min: 3                                             # Nombre de points de contours min          
+   points_min: 3                    ##                         # Nombre de points de contours min
    points_max: 3000                                          # Nombre de points de contours max
-   surface_min: 5                                            # Surface cible min
+   surface_min: 5                   ##                         # Surface cible min
    surface_max: 90000                                        # Surface cible max
    read_poly: 0                                              # 0= lecture depuis ce fichier, 1 = dessiner directement sur l'image
    depth_square: 5                                           # taille du carré (px) sur lequel on calcul la depth moyenne.
    morphology_1: 70                                          #  
-   morphology_2:70                                           #
+   morphology_2: 70                                          #
    taille_matrice: 10                                        #
-   erosion_size:2                                            #
+   erosion_size: 2                                           #
    dilatation_size: 1                                        #
-   nbr_erosion:2                                             #
+   nbr_erosion: 2                                            #
    nbr_dilatation: 2                                         #
-   not_tracked: 10                                            # Si une cible est perdu, on la cherche dans la zone de perte pendant 5 images.
+   not_tracked: 10                                           # Si une cible est perdu, on la cherche dans la zone de perte pendant 5 images.
 
 Affinity:
    t: 10                                                     # time coefficient
@@ -58,7 +58,7 @@ Tracking:
    erase_traj : 20                                           # Garder uniquement les 30 dernières secondes de chaque trajectoire
    distance_3d: 2                                            # Taille de la boule 3d (en mètres)
    hog_distance: 200                                         # hog distance max.
-   distance_pixel:300                                        # Distance seuil entre deux cibles à utiliser dans les zones où on a pas une bonne valeure de profondeur
+   distance_pixel: 300                                        # Distance seuil entre deux cibles à utiliser dans les zones où on a pas une bonne valeure de profondeur
    size_min: 5                                               # taille minimum des trajectoires des cibles a envoyer/afficher
    speed_diff: 4                                             # difference de vitesse max.
    speedp_diff: 10                                           #
@@ -91,18 +91,18 @@ Display:
    trajectory: 1                                             # display trajectory
    depth: 1                                                  # display depth
    center: 0                                                 # display center
-   rectangle:1                                               # display rectangle
+   rectangle: 1                                              # display rectangle
    contours: 0                                               # display the outline
    running_time: 1                                           # display time.
-   execution_time: 1                                          # Display 1 loop execution time.
+   execution_time: 1                                         # Display 1 loop execution time.
    noise_index: 1                                            # Diplay target noise index
 
 Image:
    compression_image: 100                                    # % of compression 
 
 Video:
-   record_video:1                                            # record a video if 1
-   streaming_video:1                                         # send a video in streaming to the server
+   record_video: 1                                           # record a video if 1
+   streaming_video: 1                                        # send a video in streaming to the server
    codec_type: XX                                            # codec type: XX, XX, XX, XX
 
 Hardware:

@@ -1,0 +1,6 @@
+history  10 20 5
+points_min  3 3 5
+surface_min  5 10 5
+between_target  100 100 10
+distance_3d  0.5 0.5 10
+size_min  2 5 10

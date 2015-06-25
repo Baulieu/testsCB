@@ -20,6 +20,7 @@ import time
 from donnees import Donnees
 from analysis import Analysis
 from xlswriter import Xlswriter
+from variations import Variations
 import subprocess
 
 
@@ -35,7 +36,7 @@ settings = Parameters(tools.openYml("caracteristiques_video.yml"))
     - every time we run the program, we change one parameter in the canvas and dump it into a parameter file.
         + open backup, parse it, empty it, close it.
         + copy CAM3 and change the name
-    - at the end of one parameter, launch the analysis program <and decide the value to adopt for this parameter> -> and changes at the end for a medium value.
+    - at the end of one parameter, launch the analysis program <and decide the value to adopt for this parameter>
 """
 
 # script to call a command:
@@ -60,6 +61,35 @@ data.printMe(f)
 
 a = {}  # dictionary of analysis
 xls = Xlswriter()
+
+
+# test for iteration according to the variations.txt file
+var = Variations()
+var.importation()  # everything is stocked inside of var
+for v in var:
+    i = v[2]
+    while i < v[2] + v[3]*v[4]:
+        name = v[0] + str(i)
+        settings.change(v[0], i)
+        # subprocess.call(['./exe'])
+        t = tools.import_result()
+        data.appendResult(name, t)
+        a[name] = Analysis(name, settings)
+        a[name].add_frames(tools.import_perf())
+        a[name].addResult(t)
+        # subprocess.call(['cp', 'video.avi', 'results/'+name+'.avi'])
+        i += v[3]
+    settings.change(v[0], v[1])
+for v in var:
+    i = v[2]
+    while i < v[2] + v[3]*v[4]:
+        name = v[0] + str(i)
+        # subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading cam3 and closing at then end
+        temp = input("nombre de faux positifs:    **attention : ne taper que des chiffres! ou alors exit pour arreter le programme**\n")  # reading the number
+        if temp == "exit":
+            raise NameError("arret volontaire du processus. For the watch.")
+        a[name].addFalsep(temp)  # sending it to the analysis module
+        xls.add_analysis(a[name], name, i)
 
 
 """ --- history --- + --- 10 to 100 --- """
