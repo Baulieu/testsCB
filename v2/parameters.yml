@@ -1,0 +1,152 @@
+%YAML:1.0
+
+Zed:
+   mode: 0                                                   # 1 = mode::PERFORMANCE , 0= mode::QUALITY     
+   sensing_mode: 1                                           # 1 = sensing::mode::FULL, 0=sensing::mode::RAW
+   input: 1                                                  # 0 = Camera   1 = Svo file.
+   path:  "../Svo_files/test4b"                                                                     
+   resolution: 1                                             # if source=camera, select quality (0=VGA, 1= HD720, 2=HD1080..) 
+   svo_fps: 60                                               #
+   clamp_value: 300000                                       #  Maximum distance of depth estimation (mm)
+   reliability: 96                                           #     
+
+MOG2:
+   history: 20                                               # Au bout de cb d'image on considère une cible qui n'a plus bougée comme faisant partie du fond.
+   varThreshold: 16                                          #
+   nmixtures: 3                                              # Mixtures Gaussiennes  
+   shadowvalue: 0                                            #
+   fTau: 0.5                                                 # Supprimer les ombres dont la couleur est deux fois plus sombre que le fond
+   backgroundRatio: 0.9                                      #
+   varThresholdGen: 9                                        #
+   fVarInit: 15                                              #
+   fCT: 0.5                                                  #
+   nShadowDetection: 127                                     #
+
+Detection:
+   points_min: 3                                             # Nombre de points de contours min          
+   points_max: 3000                                          # Nombre de points de contours max
+   surface_min: 5                                            # Surface cible min
+   surface_max: 90000                                        # Surface cible max
+   read_poly: 0                                              # 0= lecture depuis ce fichier, 1 = dessiner directement sur l'image
+   depth_square: 5                                           # taille du carré (px) sur lequel on calcul la depth moyenne.
+   morphology_1: 70                                          #  
+   morphology_2:70                                           #
+   taille_matrice: 10                                        #
+   erosion_size:2                                            #
+   dilatation_size: 1                                        #
+   nbr_erosion:2                                             #
+   nbr_dilatation: 2                                         #
+   not_tracked: 10                                            # Si une cible est perdu, on la cherche dans la zone de perte pendant 5 images.
+
+Affinity:
+   t: 10                                                     # time coefficient
+   d: 10                                                     # distance coefficient 
+   pd: 50                                                    # Pixel distance coefficient
+   hd: 10                                                    # hog distance coefficient
+   dtp: 10                                                   # Distance to predicted point (x,y,z mètres) coef
+   dtpp: 10                                                  # Distance to predicted point coef (x,y, pix)
+   ts: 10                                                    # trajectory size coeff
+   wdh: 0                                                    # ntj.width-tti_average_width
+   lgh: 0                                                    # ntj.length-tti_average_length.
+   hue: 0                                                    # hue coeff
+   sat: 0                                                    # saturation coeff
+   val: 0                                                    # value coeff.
+
+Tracking:
+   between_targets: 6000                                     # Temps entre une nouvelle cible et une cible suivie    (temps en millisecondes)
+   erase_target: 30                                          # Temps d'inactivité d'une cible avant suppression
+   erase_traj : 20                                           # Garder uniquement les 30 dernières secondes de chaque trajectoire
+   distance_3d: 2                                            # Taille de la boule 3d (en mètres)
+   hog_distance: 200                                         # hog distance max.
+   distance_pixel:300                                        # Distance seuil entre deux cibles à utiliser dans les zones où on a pas une bonne valeure de profondeur
+   size_min: 5                                               # taille minimum des trajectoires des cibles a envoyer/afficher
+   speed_diff: 4                                             # difference de vitesse max.
+   speedp_diff: 10                                           #
+   max_width_diff: 1                                         # difference max entre
+   max_length_diff: 1                                        #
+   max_hue_diff: 60                                          #
+   max_value_diff: 30                                        #
+   max_saturation_diff: 30                                   #
+
+Caracterisation:
+   s: 200                                                    # size coeff
+   as: 10                                                    # Average speed Coefficient
+   aps: 30                                                   # Average pixel speed coefficient
+   aa: 10                                                    # Average Affinity.
+   speed: 1                                                  # best average speed
+   speedp: 30                                                #
+
+Server:
+   send_ip: "http://www.cerbair.com/panel/alerts/n.php"      # 
+   check_ip: "http://www.cerbair.com/panel/alerts/COM.php"   # 
+   send_images: "http://www.cerbair.com/panel/alerts/receive_video.php"
+   send_start: "http://www.cerbair.com/panel/alerts/video_n.php"  
+   send_rate: 5                                              # Time between the sending to the server (s)
+   check_rate: 10                                            # check zed/Internet (s)
+   send_zip: 1                                               # send zip if 1
+
+Display:
+   id: 1                                                     # Display target id
+   image: 1                                                  # Display all  1 = oui, 0 = non
+   trajectory: 1                                             # display trajectory
+   depth: 1                                                  # display depth
+   center: 0                                                 # display center
+   rectangle:1                                               # display rectangle
+   contours: 0                                               # display the outline
+   running_time: 1                                           # display time.
+   execution_time: 1                                          # Display 1 loop execution time.
+   noise_index: 1                                            # Diplay target noise index
+
+Image:
+   compression_image: 100                                    # % of compression 
+
+Video:
+   record_video:1                                            # record a video if 1
+   streaming_video:1                                         # send a video in streaming to the server
+   codec_type: XX                                            # codec type: XX, XX, XX, XX
+
+Hardware:
+   reboot: 44                                                   # Maximun number of reboot
+   launch_reboot: 0                                             # Automatic reboot if 1
+
+
+new_params: 0                                                # Reload parameters if 1                 
+
+
+#ZED PARAMS
+#mode::PERFORMANCE:  Fastest mode, also requires less GPU memory, the disparity map is less detailed.
+#mode::QUALITY:       Better quality mode, the disparity map is more precise.
+#sensing::MODE::FULL: Occlusion filling, edge sharpening, advanced post-filtering. Application example : Refocusing, Multi-view generation.
+#sensing::MODE::RAW:  Structure conservative, no occlusion filling. Application example : Obstacle detection, 3D reconstructions.		
+#clamp_value:         Set the maximum distance of depth/disarity estimation (all values after this limit will be reported as TOO_FAR value
+# Reliability:        a value in [1,100]. A lower value means more confidence and precision (but less density), an upper value reduces
+
+
+#int nmixtures : Maximum allowed number of mixture components. Actual number is determined dynamically per pixel.
+#==============
+
+#float backgroundRatio : Threshold defining whether the component is significant enough to be included into the background model
+#======================  ( corresponds to TB=1 moins cf from the paper??which paper??). cf=0.1 => TB=0.9 is default. For alpha=0.001, it means that the mode should
+#                        exist for approximately 105 frames before it is considered foreground.
+
+#float varThresholdGen : Threshold for the squared Mahalanobis distance that helps decide when a sample is close to the existing components
+#======================= (corresponds to Tg). If it is not close to any component, a new component is generated. 3 sigma => Tg=3*3=9 is default.
+ #                       A smaller Tg value generates more components. A higher Tg value may result in a small number of components but they can grow too large.
+
+#float fVarInit : Initial variance for the newly generated components. It affects the speed of adaptation. The parameter value is based on your
+#================ estimate of the typical standard deviation from the images. OpenCV uses 15 as a reasonable value.
+
+#float fVarMin : Parameter used to further control the variance.
+#===============
+
+#float fVarMax : Parameter used to further control the variance.
+#===============
+
+#float fCT : Complexity reduction parameter. This parameter defines the number of samples needed to accept to prove the component exists.
+#==========  CT=0.05 is a default value for all the samples. By setting CT=0 you get an algorithm very similar to the standard Stauffer&Grimson algorithm.
+
+#uchar nShadowDetection :  The value for marking shadow pixels in the output foreground mask. Default value is 127.
+#========================
+
+#float fTau :  Shadow threshold. The shadow is detected if the pixel is a darker version of the background. Tau is a threshold defining how much darker
+#===========   the shadow can be. Tau= 0.5 means that if a pixel is more than twice darker then it is not shadow
