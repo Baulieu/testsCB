@@ -44,10 +44,10 @@ class Tools:
 
     def import_targets(self):
         result = Result()
-        with open("1435075953418_target.txt") as f:
+        with open("../backup/perf/target.txt") as f:
             temp = f.readlines()
         f.close()
-        # open ("1435075953418_target.txt", "w").close()  # TODO uncomment to activate backup refresh
+        # open ("../backup/perf/target.txt", "w").close()  # TODO uncomment to activate backup refresh
         # targets = defaultdict(list)
         targets = []
         points = []
@@ -131,10 +131,10 @@ class Tools:
 
     def import_result(self):
         result = Result2()
-        with open("1435075953418_target.txt") as f:
+        with open("../backups/perf/target.txt") as f:
             temp = f.readlines()
         f.close()
-        # open ("1435075953418_target.txt", "w").close()  # TODO uncomment to activate backup refresh
+        # open ("../backups/perf/target.txt", "w").close()  # TODO uncomment to activate backup refresh
         for line in temp:
             n1 = line.split(" | ")  # structure : 0^serial -- 1^information
             n2 = n1[1].split(" ; ")  # structure : 0^detectionTime -- 1^values -- 2^confiance -- 3^1 -- 4^affinite -- 5^bruit -- 6^id_target or 0^detectionTime -- 1^values -- 2^confiance -- 3^1 -- 4^time -- 5^0
@@ -183,7 +183,7 @@ class Tools:
     def import_perf(self):  # adds the information contained in the perf file to the result -> add a "add_perf" method in result
         # return a list of tuples: (number, svo_frame, end_time, environment)
         result = []
-        with open("1435075953418_perf.txt") as f:
+        with open("../backups/perf/perf.txt") as f:
             temp = f.readlines()
         for line in temp:
             n = line.split("|  ")

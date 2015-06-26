@@ -72,13 +72,13 @@ for v in var:
     while i < v[2] + v[3]*v[4]:
         name = v[0] + str(i)
         settings.change(v[0], i)
-        # subprocess.call(['./exe'])
+        # subprocess.call(['.././exe'])
         t = tools.import_result()
         data.appendResult(name, t)
         a[name] = Analysis(v[0], settings)
         a[name].add_frames(tools.import_perf())
         a[name].addResult(t)
-        # subprocess.call(['cp', 'video.avi', 'results/'+name+'.avi'])
+        # subprocess.call(['cp', '../backup/perf/video.avi', 'results/'+name+'.avi'])
         i += v[3]
     settings.change(v[0], v[1])
 for v in var:
