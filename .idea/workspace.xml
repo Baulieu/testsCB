@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d6cecf29-5423-4f07-a8ed-c46367a6b557" name="Default" comment="corrections mineures&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyse.xlsx" afterPath="$PROJECT_DIR$/analyse.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parameters.py" afterPath="$PROJECT_DIR$/parameters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/v1.py" afterPath="$PROJECT_DIR$/v1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xlswriter.py" afterPath="$PROJECT_DIR$/xlswriter.py" />
     </list>
     <ignored path="tests.iws" />
@@ -28,11 +28,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.4700957">
       <split-first>
         <leaf>
-          <file leaf-file-name="v1.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="v1.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/v1.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.79913914">
-                  <caret line="241" column="19" selection-start-line="241" selection-start-column="19" selection-end-line="241" selection-end-column="19" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="248" column="38" selection-start-line="248" selection-start-column="38" selection-end-line="248" selection-end-column="38" />
                   <folding>
                     <element signature="e#493#516#0" expanded="true" />
                   </folding>
@@ -54,31 +54,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="variations.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/variations.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="variations.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="variations.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/variations.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="xlswriter.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/xlswriter.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+                <state vertical-scroll-proportion="0.2195122">
+                  <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -102,7 +82,7 @@
             <entry file="file://$PROJECT_DIR$/result.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+                  <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -140,9 +120,11 @@
           <file leaf-file-name="xlswriter.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/xlswriter.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.94548064">
-                  <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
-                  <folding />
+                <state vertical-scroll-proportion="0.5609756">
+                  <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#356#5993#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -251,7 +233,7 @@
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/variations.py&#10;too&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/tools.py&#10;v1&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/v1.py&#10;resul&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/result.py&#10;resu&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/result.py&#10;to&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/tools.py&#10;targ&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/target.py&#10;point2&#9;null&#9;null&#10;target&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/target.py&#10;poin&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;analys&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;para&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;analy&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;par&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;carac&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/caracteristiques_video.yml&#10;ana&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;openB&#9;null&#9;null&#10;appendRe&#9;null&#9;null&#10;v&amp;&#9;null&#9;null&#10;donn&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/donnees.py&#10;an&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;point&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;v&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/v1.py&#10;Analy&#9;null&#9;null&#10;test&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/testDonnees.txt&#10;main&#9;null&#9;null&#10;backup&#9;null&#9;null&#10;points&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/v1.py&#10;too&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/tools.py&#10;v1&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/v1.py&#10;resul&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/result.py&#10;resu&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/result.py&#10;to&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/tools.py&#10;targ&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/target.py&#10;point2&#9;null&#9;null&#10;target&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/target.py&#10;poin&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;analys&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;para&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;analy&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;par&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/parameters.py&#10;carac&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/caracteristiques_video.yml&#10;ana&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;openB&#9;null&#9;null&#10;appendRe&#9;null&#9;null&#10;v&amp;&#9;null&#9;null&#10;donn&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/donnees.py&#10;an&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/analysis.py&#10;point&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/point.py&#10;v&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/v1.py&#10;Analy&#9;null&#9;null&#10;test&#9;FILE&#9;file://C:/Users/TF4/Documents/Baulieu/python/tests/testDonnees.txt&#10;main&#9;null&#9;null&#10;backup&#9;null&#9;null&#10;points&#9;null&#9;null" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Python.v1">
@@ -482,8 +464,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.119072706" sideWeight="0.4903226" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27056277" sideWeight="0.49789253" order="6" side_tool="false" content_ui="tabs" />
@@ -491,7 +473,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21320346" sideWeight="0.49789253" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22727273" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21621622" sideWeight="0.49706313" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21536796" sideWeight="0.49706313" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24920969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.49789253" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.119072706" sideWeight="0.5096774" order="2" side_tool="true" content_ui="tabs" />
@@ -785,13 +767,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testDonnees.txt">
+      <provider editor-type-id="LargeFileEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="LargeFileEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1442825926/time.py">
@@ -863,14 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/point.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.50574714">
@@ -907,7 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.025373135">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,6 +898,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/variations.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.094866075">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -937,36 +926,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/variations.txt">
+    <entry file="file://$PROJECT_DIR$/v1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
+          <caret line="248" column="38" selection-start-line="248" selection-start-column="38" selection-end-line="248" selection-end-column="38" />
+          <folding>
+            <element signature="e#493#516#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/variations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.2195122">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xlswriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79913914">
-          <caret line="241" column="19" selection-start-line="241" selection-start-column="19" selection-end-line="241" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.5609756">
+          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
           <folding>
-            <element signature="e#493#516#0" expanded="true" />
+            <element signature="e#356#5993#0" expanded="false" />
           </folding>
         </state>
       </provider>

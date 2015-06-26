@@ -91,7 +91,7 @@ class Xlswriter:
         charts.insert_chart('K18', chartSurfMin)
         workbook.close()
 
-    def write(self):
+    def write(self, variations):
         workbook = xlsxwriter.Workbook('analyse.xlsx')
         data = workbook.add_worksheet('data')
         i = 0
@@ -106,4 +106,32 @@ class Xlswriter:
             data.write(9, i, a[2].nbPertes)
             data.write(10, i, a[2].perf)
             i += 1
+        charts = workbook.add_worksheet('charts')
+        c = []
+        i = 0
+        j = 0  # beggining of the serie
+        k = 0  # end of the serie -> j + number of iterations
+        for v in variations:
+            c.append(workbook.add_chart({'type': 'column'}))
+            # c[i] = workbook.add_chart({'type': 'column'})
+            k = j + v[4] - 1
+            c[i].add_series({'values': ['data', int(5), int(j), int(5), int(k)], 'name': 'images/s'})
+            c[i].add_series({'values': ['data', int(6), int(j), int(6), int(k)], 'name': 'récupération profondeur'})
+            c[i].add_series({'values': ['data', int(7), int(j), int(7), int(k)], 'name': 'fiabilité height'})
+            c[i].add_series({'values': ['data', int(8), int(j), int(8), int(k)], 'name': 'proportion de cibles'})
+            c[i].add_series({'values': ['data', int(9), int(j), int(9), int(k)], 'name': 'nombre de points'})
+            c[i].add_series({'values': ['data', int(10), int(j), int(10), int(k)], 'name': 'nombre de pertes'})
+            c[i].add_series({'values': ['data', int(11), int(j), int(11), int(k)], 'name': 'indice de performance'})
+            c[i].set_title({'name': v[0]})
+            j = k + 1
+            i += 1
+        i = 2
+        j = 2
+        for ch in c:
+            charts.insert_chart('A1', ch)
+            j += 8
+            if i == 2:
+                i = 18
+            else:
+                i = 2
         workbook.close()

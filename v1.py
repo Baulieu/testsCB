@@ -86,7 +86,8 @@ for v in var:
     while i < v[2] + v[3]*v[4]:
         name = v[0] + str(i)
         # subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading cam3 and closing at then end
-        temp = input("nombre de faux positifs:    **attention : ne taper que des chiffres! ou alors exit pour arreter le programme**\n")  # reading the number
+        # temp = input("nombre de faux positifs:    **attention : ne taper que des chiffres! ou alors exit pour arreter le programme**\n")  # reading the number
+        temp = 0
         if temp == "exit":
             raise NameError("arret volontaire du processus. For the watch.")
         a[name].addFalsep(temp)  # sending it to the analysis module
@@ -248,7 +249,7 @@ while i < 52:
     xls.add_analysis(a[name], name, i)
     i += 5"""
 
-xls.write()
+xls.write(var)
 
 
 fin = time.time()
