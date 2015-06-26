@@ -1,4 +1,4 @@
-""" KPIs calculation """
+""" KPIs calculation -- convention : every KPI should be around 10"""
 from parameters import Parameters
 
 
@@ -46,11 +46,7 @@ class Analysis:
         self.frames = frames
 
     def calcImgs(self):  # frames analyzed per second -> Not yet
-        temp = []
-        for t in self.result.liste.keys():
-            if t not in temp:
-                temp.append(t)
-        return temp.__len__()  # return it divided by fps and duration
+        return self.frames.__len__() / (self.frames[self.frames.__len__() - 1][2] - self.frames[0][2])
 
     def calcProfondeur(self):  # success proportion for depth recuperation -> Ok
         i = 0
@@ -63,7 +59,7 @@ class Analysis:
         if j == 0:
             return i
         else:
-            return i / j
+            return ( j - i ) / j * 10
 
     def calcFiabTaille(self, alpha):  # reliability of height -> Ok
         j = 0
@@ -83,7 +79,7 @@ class Analysis:
         if j == 0:
             return n
         else:
-            return n / j
+            return n / j * 10
 
     def calcNbTargets(self):  # number of detected targets -> Ok
         i = 0
@@ -102,7 +98,7 @@ class Analysis:
         else:
             return i
 
-    def calcNbPertes(self):  # how many times a target has been lost during detection -> No
+    def calcNbPertes(self):  # how many times a target has been lost during detection -> yep
         # mode opératoire: savoir quand sont les frames analysées, pour chaque target ranger ses points dans les intervalles .on part du premier, on va au dernier. à chaque fois qu'on passe de True à False, on incrémente, et on enlève une fois à la fin pour ne pas compter la disparition normal de la cible. Et paf, ça fait des chocapics.
         # temporary : detection of analyzed frames using timecodes -> stock them in a list and use it as a list of intervals /!\ stock timecodes // 10 to prevent slight differences!
         """inter = []
@@ -126,7 +122,29 @@ class Analysis:
                 pertes += temp[i + 1] - temp[i] - 1
                 i += 1
         return pertes"""
-        return self.frames.__len__()
+        #return self.frames.__len__()
+        classeur = []
+        i = 0
+        while i < self.calcNbPoints():
+            classeur.append(False)
+            i += 1
+        i = 1  # parcours des intervalles
+        count = 0  # nombre total de pertes enregistrées
+        previous = False  # valeur precedente de classeur
+        for t in self.result.liste.values():
+            for c in classeur:
+                c = False
+            i = 0
+            for p in t:
+                while self.frames[i-1][2] >= p.getTime():
+                    classeur[i] = True
+                    i += 1
+            for c in classeur:
+                if previous:
+                    if c == False:
+                        count += 1
+                previous = c
+        return count
 
     def perfIndice(self):  # note sur 12 -> super sensible aux faux positifs!!
         result = self.imgs / 60
@@ -134,7 +152,8 @@ class Analysis:
         result += self.fiabiliteTaille / 50
         result += self.nbPoints / 25
         result += self.nbTargets / 25
-        result -= self.nbPertes * 2
+        result -= self.nbPertes
+        result -= self.falsep
         return result
 
     def recalc(self):
