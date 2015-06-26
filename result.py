@@ -52,4 +52,9 @@ class Result2:
         self.targets.append(p.target_id)
 
     def add_point(self, p):
-        self.liste[p.target_id].append(p)
+        if p.target_id in self.liste.keys():
+            self.liste[p.target_id].append(p)
+        else:
+            self.liste[p.target_id] = []
+            self.liste[p.target_id].append(p)
+            self.targets.append(p.target_id)

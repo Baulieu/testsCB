@@ -24,3 +24,6 @@ class Variations:
 
     def __iter__(self):
         return iter(self.parameters)
+
+    def size(self):
+        return self.parameters.__len__()

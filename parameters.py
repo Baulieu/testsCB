@@ -65,7 +65,7 @@ class Parameters:
 
     def change(self, changed, value):
         print("changing", changed, "to", value, "...")
-        self.write(open("v2/parameters.yml", encoding="cp1252", mode="r+"), changed, value)
+        self.write(open("../parameters/parameters.yml", encoding="cp1252", mode="r+"), changed, value)
         print("done")
 
     def getNbTargetsTheo(self):
