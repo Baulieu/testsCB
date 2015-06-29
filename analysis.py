@@ -46,7 +46,7 @@ class Analysis:
         self.frames = frames
 
     def calcImgs(self):  # frames analyzed per second -> Not yet
-        return self.frames.__len__() / (self.frames[self.frames.__len__() - 1][2] - self.frames[0][2])
+        return float(self.frames.__len__()) / (float(self.frames[self.frames.__len__() - 1][2]) - float(self.frames[0][2]))
 
     def calcProfondeur(self):  # success proportion for depth recuperation -> Ok
         i = 0
