@@ -131,7 +131,7 @@ class Tools:
 
     def import_result(self):
         result = Result2()
-        with open("../backups/perf/target.txt") as f:
+        with open("../backups/target.txt") as f:
             temp = f.readlines()
         f.close()
         # open ("../backups/perf/target.txt", "w").close()  # TODO uncomment to activate backup refresh
@@ -183,7 +183,7 @@ class Tools:
     def import_perf(self):  # adds the information contained in the perf file to the result -> add a "add_perf" method in result
         # return a list of tuples: (number, svo_frame, end_time, environment)
         result = []
-        with open("../backups/perf/perf.txt") as f:
+        with open("../backups/perf.txt") as f:
             temp = f.readlines()
         for line in temp:
             n = line.split("|  ")

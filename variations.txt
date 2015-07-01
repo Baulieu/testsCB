@@ -1,7 +1,6 @@
-coef1 10 5 2 5
-coef2 10 5 2 5
-coef3 10 5 2 5
-coef4 10 5 2 5
-coef5 10 5 2 5
-coef8 0 0 1 5
-coef12 10 5 2 5
+clahe 3 2 1 3
+history 12 7 2 5
+backgroundRatio 0.76 0.7 0.02 10
+fVarInit 8 7 1 3
+erosion_size 1 1 1 3 
+dilatation_size 1 1 1 3
