@@ -92,7 +92,7 @@ for v in var:
         temp = input("targets interessantes:   **exit pour sortir**")
         if temp == "exit":
             raise NameError("arret volontaire du processus. For the watch.")
-        a[name].addFalsep(temp)  # sending it to the analysis module
+        # a[name].addFalsep(temp)  # sending it to the analysis module
         a[name].addGoodTargets(temp)
         a[name].recalc()
         xls.add_analysis(a[name], v[0], i)

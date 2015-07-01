@@ -53,16 +53,18 @@ class Analysis:
         i = 0
         j = 0
         for t in self.result.liste.values():
-            for p in t:
-                if p.getZ() ==0:
-                    i += 1
-                j += 1
+            if id(t) in self.good:
+                for p in t:
+                    if p.getZ() ==0:
+                        i += 1
+                    j += 1
         if j == 0:
             return i
         else:
             return ( j - i ) / j * 10
 
-    def calcFiabTaille(self, alpha):  # reliability of height -> Ok
+    def calcFiabTaille(self, alpha):
+        # reliability of height -> Ok
         j = 0
         n = 0
         for t in self.result.liste.values():
@@ -83,15 +85,16 @@ class Analysis:
             return n / j * 10
 
     def calcNbTargets(self):  # number of detected targets -> Ok
-        i = 0
-        for t in self.result.liste.values():
-            i += 1
-        return i
+        # i = 0
+        # for t in self.result.liste.values():
+        #     i += 1
+        # return i
+        return self.good.__len__()
 
-    def calcNbPoints(self):
+    def calcNbPoints(self):  # new definition -> number of points from good targets
       # number of detected pictures -> Ok
         i = 0
-        for t in self.result.liste.values():
+        for t in self.result.liste.values() and id(t) in self.good:
             for p in t:
                 i += 1
         if self.settings.getNbTargetsTheo() != 0:
@@ -133,18 +136,19 @@ class Analysis:
         count = 0  # nombre total de pertes enregistrées
         previous = False  # valeur precedente de classeur
         for t in self.result.liste.values():
-            for c in classeur:
-                c = False
-            i = 0
-            for p in t:
-                while self.frames[i-1][2] >= p.getTime():
-                    classeur[i] = True
-                    i += 1
-            for c in classeur:
-                if previous:
-                    if c == False:
-                        count += 1
-                previous = c
+            if id(t) in self.good:
+                for c in classeur:
+                    c = False
+                i = 0
+                for p in t:
+                    while self.frames[i-1][2] >= p.getTime():
+                        classeur[i] = True
+                        i += 1
+                for c in classeur:
+                    if previous:
+                        if c == False:
+                            count += 1
+                    previous = c
         return count
 
     def perfIndice(self):  # note sur 12 -> super sensible aux faux positifs!!
@@ -176,3 +180,8 @@ class Analysis:
 
     def addGoodTarget(self, line):
         self.good = line.split(" ")  # toutes les bonnes targets sont rangées dans ce tableau
+        for t in self.good:
+            t = float(t)
+
+    def id(self, target):
+        return target.getId()%10000
