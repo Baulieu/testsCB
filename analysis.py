@@ -4,6 +4,118 @@ from parameters import Parameters
 
 class Analysis:
 
+    def __init__(self):
+        self.good = none
+        self.imgs = None
+        self.tauxProfondeur = None
+        self.fiabiliteTaille = None
+        self.nbTargets = None
+        self.nbPoints = None
+        self.nbPertes = None
+        self.perf = None
+
+    def addResult(self, result):
+        self.result = result
+
+    def add_frames(self, frames):
+        self.frames = frames
+
+    def calcImgs(self):
+        return float(self.frames.__len__()) / (float(self.frames[self.frames.__len__() - 1][2]) - float(self.frames[0][2]))
+
+    def falseP(self):
+        temp = self.result.liste.values()
+        return temp.__len__() - self.good.__len__()
+
+    def calcFiabTaille(self, alpha):
+        j = 0
+        n = 0
+        for t in self.result.liste.values():
+            moy = 0
+            i = 0
+            for p in t:
+                moy += p.getHeight()
+                i += 1
+                j += 1
+            if i != 0:
+                moy = moy / i
+            for p in t:
+                if p.getHeight() < moy - alpha or p.getHeight() > moy + alpha:
+                    n += 1
+        # if j == 0:
+        #     return n
+        else:
+            return n / j * 10  # proportion of bad results
+
+    def calcNbTargets(self):
+        return self.good.__len__()
+
+    def calcNbPoints(self):
+        i = 0
+        j = True
+        for t in self.result.liste.values():
+            if id(t) in self.good:
+                for p in t:
+                    i += 1
+        if j:
+            raise NameError("problème de reconnaissance des targets! (dans analyse, fonction calculNbPoints")
+        return i
+
+    def calcNbPertes(self):
+        classeur = []
+        i = 0
+        while i < self.calcNbPoints():
+            classeur.append(False)
+            i += 1
+        i = 1
+        count = 0
+        previous = False
+        for t in self.result.liste.values():
+            if id(t in self.good):
+                for c in classeur:
+                    c = false
+                i = 0
+                for p in t:
+                    while self.frames[i-1][2] >= p.getTime():
+                        i += 1
+                    classeur[i] = True
+                for c in classeur:
+                    if previous:
+                        if c == False:
+                            count += 1
+                    previous = c
+        return count
+
+    def perfIndice(self):
+        result = self.imgs / 60
+        result += self.tauxProfondeur / 100
+        result += self.fiabiliteTaille / 50
+        result += self.nbPoints / 25
+        result += self.nbTargets / 25
+        result -= self.nbPertes
+        result -= self.falseP()
+        return result
+
+    def recalc(self):
+        self.imgs = self.calcImgs()
+        self.tauxProfondeur = 1
+        self.fiabiliteTaille = self.calcFiabTaille()
+        self.nbTargets = self.calcNbTargets()
+        self.nbPoints = self.calcNbPoints()
+        self.nbPertes = self.calcNbPertes()
+        self.perf = self.perfIndice()
+
+    def addGoodTarget(self, line):
+        self.good = line.split(" ")
+        for t in self.good:
+            t = float(t)
+
+    def id(self, target):
+        return target.getId()%10000
+
+
+class Analysis2:
+
     def __init__(self, name, settings):
         self.name = name
         self.result = None
@@ -46,7 +158,7 @@ class Analysis:
     def add_frames(self, frames):
         self.frames = frames
 
-    def calcImgs(self):  # frames analyzed per second -> Not yet
+    def calcImgs(self):  # frames analyzed per second -> Ok
         return float(self.frames.__len__()) / (float(self.frames[self.frames.__len__() - 1][2]) - float(self.frames[0][2]))
 
     def calcProfondeur(self):  # success proportion for depth recuperation -> Ok
@@ -99,7 +211,7 @@ class Analysis:
         		for p in t:
         			i += 1
         if self.settings.getNbTargetsTheo() != 0:
-            return i/self.settings.getNbTargetsTheo()
+            return i/self.settings.getNbTargetsTheo()  # bullshit
         else:
             return i
 
@@ -186,3 +298,4 @@ class Analysis:
 
     def id(self, target):
         return target.getId()%10000
+
