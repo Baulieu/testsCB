@@ -55,7 +55,7 @@ class Parameters:
         i = 0
         while file.read(1) != "":
             if file.read(item.__len__()) == item:
-                i += item.__len__() + 3
+                i += item.__len__() + 2
                 file.seek(i)
                 file.write(str(value))
                 file.write("    ")
