@@ -8,4 +8,4 @@ Caracteristiques generales:
     convergence: 0.0203        #convergence de la ZED utilisée
 
 Qualité:
-    targets: 3                 #nombre de cibles attendus dans la vidéo
+    targets: 5                 #nombre de cibles attendus dans la vidéo

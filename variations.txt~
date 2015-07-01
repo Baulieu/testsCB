@@ -1,3 +1,2 @@
-history 10 5 1 10
-backgroundRatio 0.9 0.8 0.04 5
-varThreshold 16 10 2 5
+clahe 3 2 1 3
+

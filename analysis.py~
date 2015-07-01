@@ -94,10 +94,9 @@ class Analysis:
     def calcNbPoints(self):  # new definition -> number of points from good targets
       # number of detected pictures -> Ok
         i = 0
-        for t in self.result.liste.values():
-        	if id(t) in self.good:
-        		for p in t:
-        			i += 1
+        for t in self.result.liste.values() and id(t) in self.good:
+            for p in t:
+                i += 1
         if self.settings.getNbTargetsTheo() != 0:
             return i/self.settings.getNbTargetsTheo()
         else:
