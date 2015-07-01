@@ -1,0 +1,66 @@
+%YAML 1.0
+---
+Input from the server:
+   target_type: 1                                               # 0 = humans, 1 = drones, 2 = drones+humans.           
+   environment: 1                                               # 1 = outside , 0 = inside
+
+Zed:
+   mode: 1                                                      # 1 = mode::PERFORMANCE , 0= mode::QUALITY     
+   sensing_mode: 1                                              # 1 = sensing::mode::FULL, 0=sensing::mode::RAW
+   input: 1                                                     # 0 = Camera   1 = Svo file.
+   path: "/media/cerbair/Dell Portable Hard Drive/CerbAir/Test_Video_CerbAir/720/cafe_Robin.svo"                                                                      
+   resolution: 1                                                # if source=camera, select quality (0=VGA, 1= HD720, 2=HD1080..) 
+   svo_fps: 60                                                  # 
+
+Server:
+   send_ip:  "http://www.cerbair.com/panel/alerts/n.php"   # 
+   check_ip: "http://www.cerbair.com/panel/alerts/COM.php"      #   
+   send_rate: 1                                                 # Time between the sending to the server (s)
+   check_rate: 10                                               # check zed/Internet (s)
+   send_zip: 0                                                  # send zip if 1
+
+Display:
+   id: 1                                                        # Display target idxcc
+   image: 1                                                     # Display all  1 = oui, 0 = non
+   trajectory: 1                                                # display trajectory
+   depth: 1                                                     # display depthe
+   center: 0                                                    # display center
+   rectangle: 1                                                 # display rectangle
+   contours: 0                                                  # display the outline
+   running_time: 1                                              # display time.
+   execution_time: 1                                            # Display 1 loop execution time.
+
+Image:
+   compression_image: 100                                       # % of compression 
+ 
+Video:
+   record_video: 1                                               # record a video if 1
+   streaming_video: 1                                            # send a video in streaming to the server
+   codec_type: XX                                                # codec type: XX, XX, XX, XX
+   
+Hardware:
+   reboot: 43                                                   #Maximun number of reboot
+   launch_reboot: 0                                             #Automatic reboot if 1
+
+Affinity:
+   good_aff: 20                                                # Acceptable affinity
+   t: 50                                                       # time coefficient
+   d: 0                                                        # distance coefficient 
+   pd: 50                                                      # Pixel distance coefficient
+   dtp: 0                                                      # Distance to predicted point coef
+   
+new_params: 0                    
+
+
+#ZED PARAMS
+#mode::PERFORMANCE:  Fastest mode, also requires less GPU memory, the disparity map is less detailed.
+#mode::QUALITY:       Better quality mode, the disparity map is more precise.
+#sensing::MODE::FULL: Occlusion filling, edge sharpening, advanced post-filtering. Application example : Refocusing, Multi-view generation.
+#sensing::MODE::RAW:  Structure conservative, no occlusion filling. Application example : Obstacle detection, 3D reconstructions.		
+
+
+
+
+
+
+

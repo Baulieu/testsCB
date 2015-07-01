@@ -1,0 +1,13 @@
+﻿%YAML:1.0
+---
+MOG2:
+   history: 20.0              # Au bout de cb d'image on considère une cible qui n'a plus bougée comme faisant partie du fond.
+   varThreshold: 16
+   nmixtures: 3                  # Mixtures Gaussiennes  
+   shadowvalue: 0
+   fTau: 0.8                  #  Supprimer les ombres dont la couleur est deux fois plus sombre que le fond
+   backgroundRatio: 0.9
+   varThresholdGen: 9
+   fVarInit: 15
+   fCT: 0.5
+   nShadowDetection: 5

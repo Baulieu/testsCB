@@ -1,0 +1,20 @@
+﻿%YAML 1.0
+---
+Detection:
+   points_min: 3.0               # Nombre de points de contours min          
+   points_max: 3000              # Nombre de points de contours max
+   surface_min: 5.0              # Surface cible min
+   surface_max: 90000            # Surface cible max
+   read_poly: 0                  # 0= lecture depuis ce fichier, 1 = dessiner directement sur l'image
+   depth_square: 2               # taille du carré (px) sur lequel on calcul la depth moyenne.
+   morphology_1: 50
+   morphology_2: 20
+
+Tracking:
+   between_targets:6000.0       # Temps entre une nouvelle cible et une cible suivie    (temps en millisecondes)
+   erase_target: 60             # Temps d'inactivité d'une cible avant suppression
+   erase_traj : 60              # Garder uniquement les 30 dernières secondes de chaque trajectoire
+   distance_3d: 2.0             # Taille de la boule 3d (en mètres)
+   distance_pixel: 0.1125       # Distance seuil entre deux cibles à utiliser dans les zones où on a pas une bonne valeur de profondeur
+   size_min: 40.0               # taille minimum des trajectoires des cibles a envoyer/afficher
+   serial: "1354"

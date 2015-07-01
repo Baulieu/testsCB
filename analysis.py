@@ -17,6 +17,7 @@ class Analysis:
         self.perf = 0
         self.settings = settings
         self.frames = []
+        self.good = []
 
         """def __init__(self, name, result):
         self.name = name
@@ -172,3 +173,6 @@ class Analysis:
         print(" nombre de cibles :", self.nbTargets)
         print(" nombre de points :", self.nbPoints)
         print(" pertes de cible :", self.nbPertes)
+
+    def addGoodTarget(self, line):
+        self.good = line.split(" ")  # toutes les bonnes targets sont rangées dans ce tableau
