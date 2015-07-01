@@ -72,13 +72,13 @@ for v in var:
     while i < v[2] + v[3]*v[4]:
         name = v[0] + str(i)
         settings.change(v[0], i)
-        subprocess.call(['../bin/Cerbair V_031'])
+        # subprocess.call(['../bin/Cerbair V_031'])
         t = tools.import_result()
         data.appendResult(name, t)
         a[name] = Analysis(v[0], settings)
         a[name].add_frames(tools.import_perf())
         a[name].addResult(t)
-        subprocess.call(['cp', '../backups/Video.avi', 'results/'+name+'.avi'])
+        #subprocess.call(['cp', '../backups/Video.avi', 'results/'+name+'.avi'])
         i += v[3]
     settings.change(v[0], v[1])
 print("####################################\n####################################\n####################################\n####################################\n####################################\n####################################\n")
@@ -87,7 +87,7 @@ for v in var:
     i = v[2]
     while i < v[2] + v[3]*v[4]:
         name = v[0] + str(i)
-        subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading cam3 and closing at then end
+        # subprocess.call(['vlc', 'results/'+name+'.avi', 'vlc://quit'])  # reading cam3 and closing at then end
         # stemp = input("nombre de faux positifs:    **attention : ne taper que des chiffres! ou alors exit pour arreter le programme**\n")  # reading the number
         temp = input("targets interessantes:   **exit pour sortir**")
         if temp == "exit":

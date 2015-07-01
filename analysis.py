@@ -4,8 +4,10 @@ from parameters import Parameters
 
 class Analysis:
 
-    def __init__(self):
-        self.good = none
+    def __init__(self, name, settings):
+        self.good = []
+        self.name = name
+        self.settings = settings
         self.imgs = None
         self.tauxProfondeur = None
         self.fiabiliteTaille = None
@@ -54,10 +56,13 @@ class Analysis:
         i = 0
         j = True
         for t in self.result.liste.values():
+            print(type(self.id(t)), t[0].whichTarget(), self.id(t), type(self.good[0]))
             if id(t) in self.good:
                 for p in t:
                     i += 1
-        if j:
+                    j = False
+        if j == True:
+            print(i)
             raise NameError("problème de reconnaissance des targets! (dans analyse, fonction calculNbPoints")
         return i
 
@@ -97,21 +102,25 @@ class Analysis:
         return result
 
     def recalc(self):
+        print('debut')
+        for t in self.good:
+            print(t)
+        print('fin')
         self.imgs = self.calcImgs()
         self.tauxProfondeur = 1
-        self.fiabiliteTaille = self.calcFiabTaille()
+        self.fiabiliteTaille = self.calcFiabTaille(0.5)
         self.nbTargets = self.calcNbTargets()
         self.nbPoints = self.calcNbPoints()
         self.nbPertes = self.calcNbPertes()
         self.perf = self.perfIndice()
 
     def addGoodTarget(self, line):
-        self.good = line.split(" ")
-        for t in self.good:
-            t = float(t)
+        temp = line.split(" ")
+        for t in temp:
+            self.good.append(int(t))
 
     def id(self, target):
-        return target.getId()%10000
+        return int(target[0].whichTarget()) % 10000
 
 
 class Analysis2:
